@@ -57,6 +57,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         Services
       </Link>
 
+      {/* Social Media & Video Page */}
+      <Link href="/social-media" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+        Social & Video
+      </Link>
+
       {/* How It Works Page */}
       <Link href="/how-it-works" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
         How It Works
@@ -162,6 +167,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link href="/services" className="text-xl font-medium hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Services
                 </Link>
+                <Link href="/social-media" className="text-xl font-medium hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                  Social & Video
+                </Link>
                 <Link href="/how-it-works" className="text-xl font-medium hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   How It Works
                 </Link>
@@ -212,7 +220,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {/* Logo in footer — replace with propel.dental logo when ready */}
               <img src="/images/logo.svg" alt="Propel Dental" className="h-8 w-auto mb-4 brightness-0 invert" />
               <p className="text-blue-200 text-sm leading-relaxed mb-4">
-                Performance-based growth for dental practices across the USA. You only pay when we deliver patients.
+                Transparent, accountable growth for dental practices across the USA. No black box. No guesswork. Just clear results.
               </p>
               <p className="text-blue-300 text-xs">
                 HIPAA Compliant · All 50 States
@@ -247,6 +255,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/services" className="hover:text-white transition-colors">AI-Powered Website</Link></li>
                 <li><Link href="/services" className="hover:text-white transition-colors">Reputation Management</Link></li>
                 <li><Link href="/services" className="hover:text-white transition-colors">Patient Reactivation</Link></li>
+                <li><Link href="/social-media" className="hover:text-white transition-colors">Social Media Management</Link></li>
+                <li><Link href="/social-media" className="hover:text-white transition-colors">Video Production</Link></li>
+                <li><Link href="/social-media" className="hover:text-white transition-colors">TV & Streaming Ads</Link></li>
                 <li><Link href="/calculator" className="hover:text-white transition-colors">ROI Calculator</Link></li>
                 <li><Link href="/how-it-works" className="hover:text-white transition-colors">How It Works</Link></li>
               </ul>

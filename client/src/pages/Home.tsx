@@ -3,8 +3,8 @@
  * HOME.TSX - Propel.Dental Homepage
  * =============================================================================
  *
- * This is the main landing page for propel.dental — a performance-based
- * growth platform exclusively for dental practices across the USA.
+ * This is the main landing page for propel.dental — a transparent,
+ * performance-accountable growth platform exclusively for dental practices across the USA.
  *
  * SECTIONS ON THIS PAGE:
  *   1. Hero           - Main headline, subtext, and CTA buttons
@@ -122,7 +122,7 @@ export default function Home() {
       growth: "+150%"
     },
     {
-      quote: "We were skeptical of performance-based marketing, but Propel Dental delivered. Our implant case volume doubled within 6 months. No retainer, just results.",
+      quote: "We had been burned by agencies who hid behind dashboards full of impressions and clicks. Propel Dental showed us exactly what was happening at every stage. Our implant case volume doubled within 6 months.",
       name: "Dr. Marcus Williams",
       practice: "Premier Dental Implants",
       location: "Atlanta, GA",
@@ -162,14 +162,14 @@ export default function Home() {
               {/* Main Headline */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-primary">
                 Grow Your Dental Practice.<br />
-                <span className="text-foreground">Pay Only for Results.</span>
+                <span className="text-foreground">No Black Box. No Guesswork.</span>
               </h1>
 
               {/* Subheadline */}
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Propel Dental is the performance-based growth partner built exclusively for{" "}
+                Propel Dental is the transparent growth partner built exclusively for{" "}
                 <strong>dentists, orthodontists, oral surgeons, periodontists, endodontists, and all dental specialists</strong>{" "}
-                across the USA. No retainers. No guesswork. Just accountable patient growth.
+                across the USA. We replace the traditional agency black box with full visibility, clear performance metrics, and a model built around your practice's actual growth.
               </p>
 
               {/* CTA Buttons */}
@@ -192,8 +192,8 @@ export default function Home() {
               {/* Trust Indicators */}
               <div className="flex flex-wrap justify-center gap-6 pt-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-secondary" /> HIPAA Compliant</span>
-                <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-secondary" /> No Long-Term Contracts</span>
-                <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-secondary" /> Performance-Based Only</span>
+                <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-secondary" /> Full Transparency</span>
+                <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-secondary" /> No Black Box Reporting</span>
                 <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-secondary" /> All 50 States</span>
               </div>
             </motion.div>
@@ -299,9 +299,9 @@ export default function Home() {
       <section id="how-it-works" className="py-20 bg-white">
         <div className="container">
           <motion.div className="max-w-3xl mx-auto text-center mb-16" {...fadeIn}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Simple. Transparent. Aligned with Your Success.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Simple. Transparent. Fully Accountable.</h2>
             <p className="text-lg text-muted-foreground">
-              We begin with a free review of your practice's current online presence, local market demand, and growth potential — then we get to work.
+              We begin with a clear-eyed review of your practice's current online presence, local market demand, and growth potential — then we execute with complete visibility at every step.
             </p>
           </motion.div>
 
@@ -322,8 +322,8 @@ export default function Home() {
               {
                 icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/qANZOjHlFCcayAsG.png",
                 step: "03",
-                title: "Pay for Patients",
-                desc: "You only pay when we deliver qualified patient inquiries and booked appointments. Real-time reporting keeps you informed. No surprises, no retainers — just results."
+                title: "Measure & Report",
+                desc: "Every campaign, every channel, every dollar — tracked in real-time and reported clearly. You always know exactly what's working, what's driving growth, and where your investment is going. No vanity metrics, no mystery." 
               }
             ].map((item, i) => (
               <motion.div
@@ -412,12 +412,12 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeIn}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Built for Dental. Without the Agency Games.</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Built for Dental. Without the Agency Black Box.</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                We built Propel Dental specifically for dental practices that want growth without the hype. We understand HIPAA compliance, respect how dental offices actually operate, and avoid agency theatrics.
+                Traditional dental marketing agencies operate behind a black box — you pay a retainer, get a PDF of impressions, and hope for the best. We built Propel Dental to be the opposite: fully transparent, deeply accountable, and built exclusively for dental practices.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Our aim is to be a long-term growth partner for your dental practice, measured by results. No buzzwords, no retainers — just accountable, performance-based patient growth.
+                We understand HIPAA compliance, respect how dental offices actually operate, and give you clear visibility into every campaign, every channel, and every patient inquiry we generate for your practice.
               </p>
               <IntakeForm trigger={
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-none px-8 h-12">
@@ -451,8 +451,8 @@ export default function Home() {
                 </div>
                 <div className="bg-white p-6 shadow-lg border-t-4 border-primary">
                   <IconImage src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/WBhDloOVGpaxRdbW.png" alt="Results" size={48} />
-                  <h4 className="font-bold text-primary mt-3">Results-Driven</h4>
-                  <p className="text-sm text-muted-foreground mt-2">Pay for performance only</p>
+                  <h4 className="font-bold text-primary mt-3">Fully Accountable</h4>
+                  <p className="text-sm text-muted-foreground mt-2">Clear metrics, real outcomes, zero guesswork</p>
                 </div>
               </div>
             </motion.div>
@@ -461,7 +461,81 @@ export default function Home() {
       </section>
 
       {/* =====================================================================
-          SECTION 8: FINAL CTA
+          SECTION 8: SOCIAL MEDIA & VIDEO TEASER
+          Brief overview section linking to the full Social & Video page
+          ===================================================================== */}
+      <section className="py-20 bg-primary/5 border-t border-border">
+        <div className="container">
+          <motion.div className="max-w-3xl mx-auto text-center mb-12" {...fadeIn}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-xs font-bold tracking-wider uppercase mb-4">
+              Social Media & Video
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Own Every Screen. Every Platform. Every Day.</h2>
+            <p className="text-lg text-muted-foreground">
+              Your patients are on Facebook, Instagram, TikTok, YouTube, Reddit, Snapchat, X, and Nextdoor. We manage your presence across all of them — plus produce professional video content and TV commercials that build trust and drive appointments.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { platform: "Facebook", desc: "Local community targeting & lead ads" },
+              { platform: "Instagram", desc: "Before/after photos & Reels" },
+              { platform: "TikTok", desc: "Viral dental content & DentalTok" },
+              { platform: "YouTube", desc: "Procedure explainers & pre-roll ads" },
+              { platform: "Reddit", desc: "Community trust & AMA sessions" },
+              { platform: "Snapchat", desc: "AR smile try-ons & teen outreach" },
+              { platform: "X (Twitter)", desc: "Health awareness & community" },
+              { platform: "Nextdoor", desc: "Hyperlocal neighborhood referrals" }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                className="bg-white border border-border p-4 text-center shadow-sm hover:shadow-md transition-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05, duration: 0.4 }}
+              >
+                <div className="font-bold text-primary text-sm mb-1">{item.platform}</div>
+                <div className="text-xs text-muted-foreground">{item.desc}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {[
+              { title: "Video Production", desc: "Practice intro films, patient testimonials, procedure explainers, and social short-form content." },
+              { title: "TV Commercials", desc: "Full-production 30 and 60-second broadcast TV commercials for local markets." },
+              { title: "Streaming Ads (CTV/OTT)", desc: "Targeted ads on Hulu, Roku, Peacock, and Amazon Fire TV reaching patients in their homes." }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                className="bg-white border-l-4 border-secondary p-6 shadow-sm"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+              >
+                <h3 className="font-bold text-primary mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-none px-10 h-14"
+              asChild
+            >
+              <a href="/social-media">Explore Social Media & Video Services →</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================================
+          SECTION 9: FINAL CTA
           ===================================================================== */}
       <section className="py-24 bg-muted/50 border-t border-border">
         <div className="container">
@@ -471,7 +545,7 @@ export default function Home() {
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Propel Your Dental Practice?</h2>
               <p className="text-xl text-blue-100 mb-10">
-                Get a high-level review of your practice's growth opportunities and local patient demand — at no cost, no obligation.
+                Get a clear, honest review of your practice's growth opportunities and local patient demand — no black box, no obligation, no agency spin.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <IntakeForm trigger={

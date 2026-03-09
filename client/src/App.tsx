@@ -11,6 +11,7 @@ import About from "@/pages/About";
 import Calculator from "@/pages/Calculator";
 import Contact from "@/pages/Contact";
 import Specialties from "@/pages/Specialties";
+import SocialMedia from "@/pages/SocialMedia";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/calculator" component={Calculator} />
       <Route path="/contact" component={Contact} />
+      <Route path="/social-media" component={SocialMedia} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -153,7 +153,7 @@ export default function Services() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">One Growth System. Built for Dentistry.</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              You don't need multiple vendors or complex contracts. We manage your entire dental practice growth ecosystem under one performance-based model — tailored for every dental specialty across the USA.
+              You don't need multiple vendors, black-box dashboards, or complex contracts. We manage your entire dental practice growth ecosystem with full transparency — every channel, every metric, every result — tailored for every dental specialty across the USA.
             </p>
             {/* Specialty Badges */}
             <div className="flex flex-wrap justify-center gap-3">

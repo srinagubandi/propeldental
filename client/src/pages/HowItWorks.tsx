@@ -47,33 +47,33 @@ export default function HowItWorks() {
     {
       icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/qANZOjHlFCcayAsG.png",
       step: "03",
-      title: "Pay for Patients",
-      desc: "You only pay when we deliver qualified patient inquiries and booked appointments. Our performance-based model means our success is directly tied to yours. No retainers, no wasted spend, no surprises.",
+      title: "Measure, Report & Grow",
+      desc: "Every campaign runs in the open. You get a real-time dashboard showing exactly which channels are driving patient inquiries, what your growth trajectory looks like, and where every dollar is being deployed. No black box, no mystery — just clear, accountable performance.",
       details: [
-        "Pay per qualified patient inquiry or booked appointment",
-        "No monthly retainers or management fees",
-        "No long-term contracts or lock-in periods",
-        "Real-time reporting on all patient activity",
-        "Monthly performance reviews with your growth specialist"
+        "Real-time dashboard with full campaign visibility",
+        "Plain-language reporting — no vanity metrics",
+        "Monthly performance reviews with your growth specialist",
+        "Clear attribution: know exactly which channels drive patients",
+        "Flexible arrangements — no long-term lock-in"
       ]
     }
   ];
 
   const comparisonRows = [
-    { feature: "Pricing Model", us: "Performance-Based", them: "High Fixed Retainer" },
-    { feature: "Technology", us: "AI-Driven Real-Time Optimization", them: "Manual Reporting & Slow Updates" },
-    { feature: "Financial Risk", us: "Shared Risk", them: "100% On You" },
-    { feature: "Contract Terms", us: "Flexible, No Lock-in", them: "12-24 Month Lock-in" },
-    { feature: "Incentives", us: "Aligned with Your Growth", them: "Paid Regardless of Results" },
+    { feature: "Transparency", us: "Full Visibility Into Every Campaign", them: "Black Box — You Hope It Works" },
+    { feature: "Reporting", us: "Real-Time, Plain-Language Dashboards", them: "Monthly PDFs of Vanity Metrics" },
+    { feature: "Accountability", us: "Clear Attribution & Outcome Tracking", them: "Impressions, Clicks, No Context" },
+    { feature: "Contract Terms", us: "Flexible, No Long-Term Lock-in", them: "12–24 Month Retainer Contracts" },
+    { feature: "Incentives", us: "Aligned with Your Practice Growth", them: "Paid Regardless of Your Results" },
     { feature: "HIPAA Compliance", us: "Built-In, Dental-First", them: "Often an Afterthought" },
     { feature: "Dental Expertise", us: "Exclusively Dental", them: "Generic Healthcare or All Industries" },
-    { feature: "Reporting", us: "Real-Time Patient Outcomes", them: "Vanity Metrics & Impressions" }
+    { feature: "Technology", us: "AI-Driven Real-Time Optimization", them: "Manual Reporting & Slow Updates" }
   ];
 
   const faqs = [
     {
       q: "How is Propel Dental different from a traditional dental marketing agency?",
-      a: "Traditional agencies charge a fixed monthly retainer regardless of results. Propel Dental is performance-based — you only pay when we deliver qualified patient inquiries and booked appointments. Our incentives are completely aligned with your practice's growth."
+      a: "Traditional dental marketing agencies operate behind a black box — you pay a retainer, receive a monthly report full of impressions and clicks, and are left guessing whether any of it is actually driving patients through your door. Propel Dental is built on the opposite principle: full transparency. Every campaign is visible, every metric is explained in plain language, and our success is measured by your practice's actual growth — not by how many slides are in our deck."
     },
     {
       q: "What dental specialties do you work with?",
@@ -89,7 +89,7 @@ export default function HowItWorks() {
     },
     {
       q: "Do you require a long-term contract?",
-      a: "No. We don't believe in locking dental practices into long-term contracts. Our performance-based model means we have to earn your business every month. We offer flexible arrangements with no long-term lock-in."
+      a: "No. We don't believe in locking dental practices into long-term contracts. We believe in earning your trust through transparent performance and real results. We offer flexible arrangements with no long-term lock-in — because if we're doing our job, you won't want to leave."
     },
     {
       q: "What is the Practice Growth Brief?",
@@ -105,7 +105,7 @@ export default function HowItWorks() {
           <motion.div className="text-center max-w-3xl mx-auto" {...fadeIn}>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">How Propel Dental Works</h1>
             <p className="text-xl text-muted-foreground">
-              Simple. Transparent. Aligned with your dental practice's success. No retainers, no guesswork — just accountable, performance-based patient growth.
+              Simple. Transparent. Fully accountable. We replace the traditional agency black box with complete visibility into every campaign, every channel, and every patient inquiry we generate for your practice.
             </p>
           </motion.div>
         </div>

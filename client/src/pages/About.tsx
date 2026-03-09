@@ -28,16 +28,16 @@ export default function About() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeIn}>
-              <h1 className="text-4xl md:text-5xl font-bold mb-8 text-primary">Built for Dental Practices. Without the Agency Games.</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-8 text-primary">Built for Dental Practices. Without the Agency Black Box.</h1>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  We built Propel Dental specifically for dental practices — dentists, orthodontists, oral surgeons, periodontists, endodontists, and pediatric dentists — that want growth without the hype. We understand HIPAA compliance, respect how dental offices actually operate, and avoid agency theatrics.
+                  We built Propel Dental specifically for dental practices — dentists, orthodontists, oral surgeons, periodontists, endodontists, and pediatric dentists — that are tired of paying agencies for reports full of impressions, clicks, and vanity metrics that never translate to a busier schedule.
                 </p>
                 <p>
-                  Our founders saw a clear gap in the market: great dental practices were struggling to grow because traditional marketing agencies were focused on selling retainers, not delivering patients. The incentives were completely misaligned.
+                  Traditional dental marketing agencies operate behind a black box. You sign a retainer, get a monthly PDF, and are left guessing whether any of it is actually working. The incentives are completely misaligned — they get paid whether your practice grows or not.
                 </p>
                 <p>
-                  We changed that. With Propel Dental, you only pay when we deliver qualified patient inquiries and booked appointments. Our success is directly tied to yours — and that's exactly how it should be.
+                  We built Propel Dental to be the opposite. Every campaign we run is fully visible to you. Every channel, every metric, every patient inquiry is tracked and reported in plain language. We move away from the traditional agency model and toward a true growth partnership built on transparency and accountability.
                 </p>
                 <p>
                   We serve dental practices across all 50 states, from solo general dentists to multi-location specialty groups. Our AI-powered platform is built specifically for the dental industry, with HIPAA-compliant tools and dental-specific patient acquisition strategies.
@@ -61,8 +61,8 @@ export default function About() {
             >
               <div className="space-y-8">
                 <div className="bg-white p-8 shadow-lg border-l-4 border-primary">
-                  <h3 className="text-2xl font-bold text-primary mb-3">Performance-Based</h3>
-                  <p className="text-muted-foreground">You only pay when we deliver qualified patient inquiries and booked appointments. No retainers, no wasted spend, no risk on your end.</p>
+                  <h3 className="text-2xl font-bold text-primary mb-3">Fully Transparent</h3>
+                  <p className="text-muted-foreground">Every campaign, every channel, every dollar — reported clearly in real time. No black-box dashboards, no mystery metrics, no agency spin.</p>
                 </div>
                 <div className="bg-white p-8 shadow-lg border-l-4 border-secondary">
                   <h3 className="text-2xl font-bold text-primary mb-3">Dental-First</h3>
