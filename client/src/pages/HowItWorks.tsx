@@ -155,7 +155,7 @@ export default function HowItWorks() {
           <motion.div className="text-center max-w-3xl mx-auto mb-16" {...fadeIn}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">The Propel Dental Difference</h2>
             <p className="text-blue-100 text-lg">
-              Misaligned incentives are the problem with traditional dental marketing agencies. Our performance-based model changes everything.
+              Traditional agencies hide behind black-box reporting and collect retainers regardless of your results. We operate differently — with full transparency, clear accountability, and incentives aligned with your practice's actual growth.
             </p>
           </motion.div>
 

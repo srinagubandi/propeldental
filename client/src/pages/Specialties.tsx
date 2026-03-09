@@ -142,7 +142,7 @@ export default function Specialties() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Every Dental Specialty. One Growth Partner.</h1>
             <p className="text-xl text-muted-foreground">
-              From general family dentistry to complex prosthodontic reconstruction — Propel Dental has a proven, performance-based growth playbook for every dental specialty in the USA.
+              From general family dentistry to complex prosthodontic reconstruction — Propel Dental has a proven, transparent growth playbook for every dental specialty in the USA. Full visibility. Clear results. No black box.
             </p>
           </motion.div>
         </div>

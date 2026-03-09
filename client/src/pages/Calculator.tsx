@@ -15,7 +15,7 @@ export default function Calculator() {
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Dental Practice ROI Calculator</h1>
             <p className="text-xl text-muted-foreground">
-              See how much additional revenue your dental practice could generate with Propel Dental's performance-based growth system. Select your specialty and enter your current metrics to get a personalized projection.
+              See how much additional revenue your dental practice could generate with Propel Dental's transparent, accountable growth system. Select your specialty and enter your current metrics to get a personalized projection.
             </p>
           </motion.div>
           <ROICalculator />

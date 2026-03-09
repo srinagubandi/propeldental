@@ -4,7 +4,7 @@
  * =============================================================================
  *
  * This interactive calculator lets dental practices estimate their potential
- * revenue growth with Propel Dental's performance-based marketing.
+ * revenue growth with Propel Dental's transparent, accountable marketing.
  *
  * HOW IT WORKS:
  *   1. User selects their dental specialty

@@ -40,7 +40,7 @@ export default function IntakeForm({ trigger }: { trigger?: React.ReactNode }) {
             <div className="text-5xl mb-4">🦷</div>
             <h3 className="text-2xl font-bold text-primary mb-4">Thank you.</h3>
             <p className="text-muted-foreground">
-              We'll review your dental practice information and follow up within 1 business day if there's a clear opportunity where our performance-based model can add value.
+              We'll review your dental practice information and follow up within 1 business day with a clear, honest assessment of your growth opportunities.
             </p>
           </div>
         </DialogContent>
@@ -57,7 +57,7 @@ export default function IntakeForm({ trigger }: { trigger?: React.ReactNode }) {
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-primary">Practice Growth Brief Request</DialogTitle>
           <DialogDescription className="text-base pt-2">
-            This brief helps us understand your dental practice, local market, and growth goals so we can determine whether our performance-based model is a fit. There is no obligation and no sales pressure.
+            This brief helps us understand your dental practice, local market, and growth goals so we can build a transparent, tailored growth strategy for your practice. There is no obligation and no sales pressure.
           </DialogDescription>
         </DialogHeader>
 

@@ -109,7 +109,7 @@ export default function About() {
         <div className="container max-w-3xl">
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
           <p className="text-xl text-blue-100 leading-relaxed">
-            To empower dental practices across the USA to grow through transparent, performance-based marketing — allowing dentists and dental specialists to focus on what they do best: delivering exceptional patient care.
+            To empower dental practices across the USA to grow through fully transparent, accountable marketing — giving dentists and dental specialists complete visibility into every campaign, every channel, and every result, so they can focus on what they do best: delivering exceptional patient care.
           </p>
         </div>
       </section>
