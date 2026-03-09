@@ -1,0 +1,47 @@
+- [x] Update icons to flat 2D design for better visibility
+- [x] Update mobile menu to full-screen overlay with centered links and close button
+- [x] Update service sections to centered layout on mobile with icons above text
+- [x] Update footer to centered layout on mobile with organized sections
+- [x] Create Contact Us page with intake form and phone number
+- [x] Add visible click-to-call phone number in header (mobile and desktop)
+- [x] Add visible click-to-call phone number in footer
+- [x] Create database schema for site content management
+- [x] Create admin dashboard for content customization
+- [x] Add admin routes and navigation
+- [x] Seed initial content blocks (phone, email, headlines) to database
+- [x] Add notification preferences schema (email, SMS, WhatsApp settings)
+- [x] Create testimonial management schema and CRUD
+- [x] Add testimonial management UI in admin dashboard
+- [x] Implement SendGrid email notification for leads
+- [x] Implement WhatsApp notification integration
+- [x] Add notification settings UI in admin dashboard
+- [x] Display testimonials dynamically on Results page
+- [x] Add simple username/password admin login
+- [x] Remove hardcoded admin credentials - require environment variables only
+- [x] Update favicon to pulse icon
+- [x] Extract and organize new images from zip file
+- [x] Update homepage with new images (without phone number from images)
+- [x] Remove all language about "no contracts" and "no long-term contracts"
+- [x] Fix broken hero image on homepage
+- [x] Upload and use new hero image from user
+- [x] Add new sections to homepage using DP_2 and DP_3 images
+- [x] Remove "Performance-Based Marketing" badge from hero section
+- [x] Review homepage for redundant content and remove duplicates
+- [x] Fix all broken icon images on homepage
+- [x] Hide reviews section with star ratings on homepage
+- [x] Remove hero image from homepage
+- [x] Fix broken Social Media & Content icon on Services page
+- [x] Hide testimonials section with client photos and reviews (not found on homepage)
+- [x] Update AI Advantage section title to match new messaging
+- [x] Ensure AI Services section is not duplicate of existing AI Advantage section
+- [x] Hide Results page from navigation menu (desktop, mobile, footer)
+- [x] Remove "Data-Driven. Patient-Focused." section from homepage
+- [x] Remove "Real Results. Real Growth." section with testimonials from homepage
+- [x] Add Contact Us link to top navigation
+- [x] Update Contact page with intake form (no mailto links)
+- [x] Replace all contact buttons/links with intake form popup
+- [x] Remove all mailto links from site
+- [x] Add notes/additional information field to intake form
+- [x] Fix broken icons on Services page
+- [x] Fix broken image on About Us page
+- [x] Fix blue button text color on Contact page to be white by default

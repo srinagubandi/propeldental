@@ -1,0 +1,42 @@
+# =============================================================================
+# RAILWAY DEPLOYMENT CONFIGURATION - Propel Dental
+# =============================================================================
+#
+# This file configures how Railway builds and runs the propel.dental website.
+#
+# REQUIRED ENVIRONMENT VARIABLES (set in Railway dashboard):
+#   - DATABASE_URL         : MySQL/TiDB connection string
+#   - OPENAI_API_KEY       : OpenAI API key for AI chat features
+#   - ADMIN_USERNAME       : Admin panel username
+#   - ADMIN_PASSWORD       : Admin panel password
+#   - JWT_SECRET           : Random secret for JWT tokens (generate with: openssl rand -hex 32)
+#
+# OPTIONAL ENVIRONMENT VARIABLES:
+#   - NOTIFICATION_EMAIL   : Email address to receive lead notifications
+#   - TWILIO_ACCOUNT_SID   : Twilio account SID for SMS notifications
+#   - TWILIO_AUTH_TOKEN    : Twilio auth token for SMS notifications
+#   - TWILIO_PHONE_NUMBER  : Twilio phone number for SMS notifications
+#   - NOTIFY_PHONE_NUMBER  : Phone number to receive SMS notifications
+#
+# HOW TO DEPLOY:
+#   1. Create a new project in Railway (https://railway.app)
+#   2. Connect this GitHub repository
+#   3. Add a MySQL database service
+#   4. Set the environment variables listed above
+#   5. Railway will automatically build and deploy on every push to main
+#
+# =============================================================================
+
+[build]
+builder = "nixpacks"
+buildCommand = "npm install --legacy-peer-deps && npm run build"
+
+[deploy]
+startCommand = "npm run start"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[[services]]
+name = "propeldental-web"
