@@ -559,7 +559,7 @@ export default function Home() {
                   className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-10 h-16 rounded-none"
                   asChild
                 >
-                  <a href="tel:1-800-362-7767">Call 1-800-DOC-PROPEL</a>
+                  <a href="tel:8887767735">Call (888) PROPEL-5</a>
                 </Button>
               </div>
             </div>

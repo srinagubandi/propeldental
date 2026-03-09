@@ -116,11 +116,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               TO CHANGE PHONE NUMBER: Edit both the tel: link and display text
           ----------------------------------------------------------------- */}
           <a
-            href="tel:1-800-362-7767"
+            href="tel:8887767735"
             className="hidden md:flex items-center gap-2 text-sm font-semibold text-primary hover:text-secondary transition-colors"
           >
             <Phone className="h-4 w-4" />
-            1-800-DOC-PROPEL
+            (888) PROPEL-5
           </a>
 
           {/* -----------------------------------------------------------------
@@ -151,12 +151,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <nav className="flex flex-col items-center justify-center h-full gap-8 py-16">
                 {/* Click-to-call phone number */}
                 <a
-                  href="tel:1-800-362-7767"
+                  href="tel:8887767735"
                   className="flex items-center gap-2 text-xl font-bold text-secondary hover:text-secondary/80 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   <Phone className="h-5 w-5" />
-                  1-800-DOC-PROPEL
+                  (888) PROPEL-5
                 </a>
 
                 <div className="w-16 h-px bg-border" />
@@ -270,8 +270,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-bold text-white mb-4 uppercase tracking-wider text-sm">Get Started</h4>
               <div className="space-y-4 text-sm text-blue-200 mb-6">
                 <p>
-                  <a href="tel:1-800-362-7767" className="hover:text-white transition-colors font-semibold text-white">
-                    1-800-DOC-PROPEL
+                  <a href="tel:8887767735" className="hover:text-white transition-colors font-semibold text-white">
+                    (888) PROPEL-5
                   </a>
                 </p>
                 <p>

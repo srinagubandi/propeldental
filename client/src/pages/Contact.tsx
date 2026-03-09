@@ -68,8 +68,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-primary mb-1">Phone</h3>
-                    <a href="tel:1-800-362-7767" className="text-lg text-muted-foreground hover:text-primary transition-colors">
-                      1-800-DOC-PROPEL
+                    <a href="tel:8887767735" className="text-lg text-muted-foreground hover:text-primary transition-colors">
+                      (888) PROPEL-5
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">Mon–Fri, 9am–6pm EST</p>
                   </div>
