@@ -25,11 +25,6 @@ export default function Home() {
 
         <div className="container mx-auto relative z-10 py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-8">
-              <Zap className="w-4 h-4" />
-              Exclusively for Full-Arch & Implant Practices
-            </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
               Your Implant Practice{" "}
               <span className="text-primary">Deserves More</span> Than
