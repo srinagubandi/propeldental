@@ -1,226 +1,171 @@
-/**
- * =============================================================================
- * CONTACT.TSX - Propel.Dental Contact Page
- * =============================================================================
- *
- * This page provides contact information and a contact form for dental
- * practices to get in touch with Propel Dental.
- *
- * TO CHANGE CONTACT INFO: Edit the contact details in the left column below
- * TO CHANGE FORM FIELDS: Edit the form in the right column below
- *
- * =============================================================================
- */
-
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import IntakeForm from "@/components/IntakeForm";
+import {
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+} from "lucide-react";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.6 }
-  };
-
   return (
     <Layout>
-      {/* Hero */}
-      <section className="py-16 bg-gradient-to-br from-background to-blue-50/30 border-b border-border">
-        <div className="container">
-          <motion.div className="text-center max-w-2xl mx-auto" {...fadeIn}>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Contact Propel Dental</h1>
-            <p className="text-xl text-muted-foreground">
-              Ready to grow your dental practice? Get in touch and we'll show you exactly how we can help.
-            </p>
-          </motion.div>
+      {/* HERO */}
+      <section className="py-20 md:py-28 border-b border-border">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight mb-6">
+                Let's Talk About{" "}
+                <span className="text-primary">Your Practice</span>
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+                Whether you're exploring your options, frustrated with your current agency, or
+                ready to build a real full-arch marketing program — we're here to have an honest
+                conversation. No pressure. No pitch deck. Just a real talk about what's possible.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Call Us</h3>
+                    <a href="tel:8887767735" className="text-primary hover:underline text-lg font-medium">
+                      (888) PROPEL-5
+                    </a>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Talk to a real person who understands implant dentistry.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Email Us</h3>
+                    <a href="mailto:hello@propel.dental" className="text-primary hover:underline text-lg font-medium">
+                      hello@propel.dental
+                    </a>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      We respond within 24 hours. Usually much faster.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">We Come to You</h3>
+                    <p className="text-muted-foreground">
+                      We serve practices across all 50 states. Our P90 Protocol includes
+                      in-office visits wherever you are.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Office Hours</h3>
+                    <p className="text-muted-foreground">
+                      Monday – Friday: 8:00 AM – 6:00 PM EST
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      After-hours? Leave a message. We'll call you back first thing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT SIDE — INTAKE FORM CTA */}
+            <div className="bg-card border border-border rounded-lg p-8 md:p-10">
+              <h2 className="text-2xl font-bold mb-4">Request a Strategy Call</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Tell us about your practice and we'll schedule a no-obligation strategy call
+                to discuss your goals, your market, and how we'd approach your growth.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                {[
+                  "30-minute call with a full-arch marketing specialist",
+                  "Preliminary competitive analysis of your market",
+                  "Honest assessment of your current marketing",
+                  "No contracts, no commitments, no pressure",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
+                      {i + 1}
+                    </div>
+                    <span className="text-sm text-muted-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <IntakeForm
+                trigger={
+                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-14 text-lg">
+                    Book Your Strategy Call <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                }
+              />
+
+              <p className="text-xs text-muted-foreground text-center mt-4">
+                Or call us directly at{" "}
+                <a href="tel:8887767735" className="text-primary hover:underline">
+                  (888) PROPEL-5
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-16">
+      {/* FAQ-STYLE SECTION */}
+      <section className="py-20 md:py-28 bg-card">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-10 text-center">Common Questions Before Your First Call</h2>
 
-            {/* Left Column: Contact Info */}
-            <motion.div {...fadeIn}>
-              <h2 className="text-2xl font-bold text-primary mb-8">Get in Touch</h2>
-
-              <div className="space-y-6">
-                {/* Phone */}
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-primary mb-1">Phone</h3>
-                    <a href="tel:8887767735" className="text-lg text-muted-foreground hover:text-primary transition-colors">
-                      (888) PROPEL-5
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-1">Mon–Fri, 9am–6pm EST</p>
-                  </div>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "How much does it cost?",
+                  a: "Every engagement is custom, so pricing varies based on your market, your goals, and the scope of work. We'll give you a transparent breakdown on our strategy call — no hidden fees, no surprises.",
+                },
+                {
+                  q: "Do you require long-term contracts?",
+                  a: "We don't lock you into long-term contracts. We believe in earning your business every month. That said, the P90 Protocol is a 90-day commitment because meaningful results take time to build properly.",
+                },
+                {
+                  q: "Do you work with practices outside the USA?",
+                  a: "Currently, we focus exclusively on dental practices in the United States. This allows us to maintain deep expertise in the regulatory, competitive, and patient dynamics of the US market.",
+                },
+                {
+                  q: "What if I'm already working with another agency?",
+                  a: "That's fine. Many of our partners came to us from other agencies. We'll give you an honest assessment of what's working and what's not — and if we think your current agency is doing a good job, we'll tell you that too.",
+                },
+                {
+                  q: "How quickly can we start?",
+                  a: "We limit the number of new partners we onboard each quarter to ensure quality. After your strategy call, if we're a mutual fit, we can typically begin the P90 Protocol within 2-3 weeks.",
+                },
+              ].map((faq, i) => (
+                <div key={i} className="p-6 rounded-lg border border-border bg-background">
+                  <h3 className="font-semibold mb-2">{faq.q}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
                 </div>
-
-                {/* Email */}
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-primary mb-1">Email</h3>
-                    <a href="mailto:hello@propel.dental" className="text-lg text-muted-foreground hover:text-primary transition-colors">
-                      hello@propel.dental
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-1">We respond within 1 business day</p>
-                  </div>
-                </div>
-
-                {/* Coverage */}
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-primary mb-1">Coverage</h3>
-                    <p className="text-lg text-muted-foreground">All 50 States</p>
-                    <p className="text-sm text-muted-foreground mt-1">Serving dental practices nationwide</p>
-                  </div>
-                </div>
-
-                {/* Hours */}
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Clock className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-primary mb-1">Business Hours</h3>
-                    <p className="text-muted-foreground">Monday – Friday: 9:00 AM – 6:00 PM EST</p>
-                    <p className="text-muted-foreground">Saturday: 10:00 AM – 2:00 PM EST</p>
-                    <p className="text-muted-foreground">Sunday: Closed</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* What to Expect */}
-              <div className="mt-10 p-6 bg-muted/30 border-l-4 border-secondary">
-                <h3 className="font-bold text-primary mb-3">What Happens After You Contact Us?</h3>
-                <ol className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex gap-2"><span className="font-bold text-secondary">1.</span> A dental growth specialist reviews your practice information</li>
-                  <li className="flex gap-2"><span className="font-bold text-secondary">2.</span> We research your local market and competition</li>
-                  <li className="flex gap-2"><span className="font-bold text-secondary">3.</span> We schedule a brief call to share your Practice Growth Brief</li>
-                  <li className="flex gap-2"><span className="font-bold text-secondary">4.</span> No obligation, no sales pressure — just honest insights</li>
-                </ol>
-              </div>
-            </motion.div>
-
-            {/* Right Column: Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              {submitted ? (
-                <div className="text-center py-20 border border-border p-12">
-                  <div className="text-5xl mb-6">🦷</div>
-                  <h3 className="text-2xl font-bold text-primary mb-4">Thank you for reaching out!</h3>
-                  <p className="text-muted-foreground text-lg">
-                    A Propel Dental growth specialist will review your information and follow up within 1 business day.
-                  </p>
-                </div>
-              ) : (
-                <div className="border border-border p-8 shadow-sm">
-                  <h2 className="text-2xl font-bold text-primary mb-2">Send Us a Message</h2>
-                  <p className="text-muted-foreground mb-8">
-                    Tell us about your dental practice and growth goals. We'll get back to you within 1 business day.
-                  </p>
-
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Your Name</Label>
-                        <Input id="name" required placeholder="Dr. Jane Smith" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="practiceName">Practice Name</Label>
-                        <Input id="practiceName" required placeholder="Smith Family Dental" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" type="email" required placeholder="doctor@practice.com" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input id="phone" type="tel" placeholder="(555) 123-4567" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="specialty">Dental Specialty</Label>
-                        <Select required>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select specialty" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="general">General Dentistry</SelectItem>
-                            <SelectItem value="orthodontics">Orthodontics</SelectItem>
-                            <SelectItem value="cosmetic">Cosmetic Dentistry</SelectItem>
-                            <SelectItem value="implants">Dental Implants</SelectItem>
-                            <SelectItem value="oral-surgery">Oral Surgery</SelectItem>
-                            <SelectItem value="periodontics">Periodontics</SelectItem>
-                            <SelectItem value="endodontics">Endodontics</SelectItem>
-                            <SelectItem value="pediatric">Pediatric Dentistry</SelectItem>
-                            <SelectItem value="prosthodontics">Prosthodontics</SelectItem>
-                            <SelectItem value="sedation">Sedation Dentistry</SelectItem>
-                            <SelectItem value="other">Other / Multi-Specialty</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="location">Practice Location</Label>
-                        <Input id="location" required placeholder="City, State" />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">How Can We Help?</Label>
-                      <Textarea
-                        id="message"
-                        required
-                        placeholder="Tell us about your practice and what you're looking to achieve..."
-                        rows={4}
-                      />
-                    </div>
-
-                    <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold h-12 text-lg rounded-none">
-                      Send Message
-                    </Button>
-
-                    <p className="text-xs text-muted-foreground text-center">
-                      No spam. No obligation. HIPAA-compliant communication.
-                    </p>
-                  </form>
-                </div>
-              )}
-            </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

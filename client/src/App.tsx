@@ -5,44 +5,46 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
-import HowItWorks from "./pages/HowItWorks";
+import FullArchMarketing from "./pages/FullArchMarketing";
+import P90Protocol from "./pages/P90Protocol";
+import Results from "./pages/Results";
 import About from "@/pages/About";
-import Calculator from "@/pages/Calculator";
 import Contact from "@/pages/Contact";
-import Specialties from "@/pages/Specialties";
-import SocialMedia from "@/pages/SocialMedia";
+import Calculator from "@/pages/Calculator";
+import DentalSEO from "@/pages/services/DentalSEO";
+import SocialMedia from "@/pages/services/SocialMedia";
+import PaidSearch from "@/pages/services/PaidSearch";
+import VideoProduction from "@/pages/services/VideoProduction";
+import AEO from "@/pages/services/AEO";
+import GEO from "@/pages/services/GEO";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/specialties"} component={Specialties} />
-      <Route path={"/services"} component={Services} />
-      <Route path={"/how-it-works"} component={HowItWorks} />
+      <Route path={"/full-arch-marketing"} component={FullArchMarketing} />
+      <Route path={"/p90-protocol"} component={P90Protocol} />
+      <Route path={"/results"} component={Results} />
       <Route path="/about" component={About} />
-      <Route path="/calculator" component={Calculator} />
       <Route path="/contact" component={Contact} />
-      <Route path="/social-media" component={SocialMedia} />
+      <Route path="/calculator" component={Calculator} />
+      {/* Second-level service pages */}
+      <Route path="/services/dental-seo" component={DentalSEO} />
+      <Route path="/services/social-media" component={SocialMedia} />
+      <Route path="/services/paid-search" component={PaidSearch} />
+      <Route path="/services/video-production" component={VideoProduction} />
+      <Route path="/services/aeo" component={AEO} />
+      <Route path="/services/geo" component={GEO} />
       <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
           <Router />

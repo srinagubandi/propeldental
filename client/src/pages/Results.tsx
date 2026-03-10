@@ -1,392 +1,194 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Star, Quote, Loader2 } from "lucide-react";
-import { motion } from "framer-motion";
 import IntakeForm from "@/components/IntakeForm";
-import { trpc } from "@/lib/trpc";
 import {
-  DoctorIcon,
-  DentistIcon,
-  PharmacyIcon,
-  PTOTIcon,
-  GrowthPulseIcon,
-} from "@/components/BrandIcons";
-
-// Static case studies (fallback content)
-const CASE_STUDIES = [
-  {
-    specialty: "Dentists",
-    icon: DentistIcon,
-    title: "Scaling a Multi-Location Dental Group",
-    metric: "+145%",
-    metricLabel: "New Patient Volume",
-    desc: "How we helped a 3-location dental group dominate local search and fill their hygiene schedules with high-value patients.",
-    tags: ["SEO", "PPC", "Reputation"],
-    stats: [
-      { label: "Cost Per Lead", value: "-40%" },
-      { label: "ROI", value: "8.5x" }
-    ]
-  },
-  {
-    specialty: "Doctors",
-    icon: DoctorIcon,
-    title: "Primary Care Practice Growth",
-    metric: "+87%",
-    metricLabel: "Monthly New Patients",
-    desc: "A family medicine practice struggling with patient acquisition transformed their digital presence and filled their panel in 6 months.",
-    tags: ["Local SEO", "Google Ads", "Website"],
-    stats: [
-      { label: "Revenue Growth", value: "+$420K" },
-      { label: "Lead Quality", value: "High" }
-    ]
-  },
-  {
-    specialty: "Pharmacies",
-    icon: PharmacyIcon,
-    title: "Independent Pharmacy Turnaround",
-    metric: "+210%",
-    metricLabel: "Prescription Transfers",
-    desc: "Competing against big chains seemed impossible until we implemented hyper-local targeting and community engagement campaigns.",
-    tags: ["Social Media", "Local SEO", "Reputation"],
-    stats: [
-      { label: "New Customers/Mo", value: "+95" },
-      { label: "Retention Rate", value: "92%" }
-    ]
-  },
-  {
-    specialty: "PT / OT",
-    icon: PTOTIcon,
-    title: "Physical Therapy Clinic Expansion",
-    metric: "+165%",
-    metricLabel: "Patient Referrals",
-    desc: "A single-location PT clinic grew to 3 locations by building physician referral networks and capturing direct-access patients online.",
-    tags: ["Content Marketing", "PPC", "Referral Program"],
-    stats: [
-      { label: "Admin Time Saved", value: "20 hrs/wk" },
-      { label: "Patient Satisfaction", value: "4.9/5" }
-    ]
-  },
-  {
-    specialty: "Dentists",
-    icon: DentistIcon,
-    title: "Cosmetic Dentistry Revenue Boost",
-    metric: "+$1.8M",
-    metricLabel: "Annual Revenue",
-    desc: "Shifting focus from general dentistry to high-value cosmetic procedures through targeted campaigns and patient education content.",
-    tags: ["Video Marketing", "PPC", "Website Design"],
-    stats: [
-      { label: "Avg Case Value", value: "+65%" },
-      { label: "Consult Rate", value: "78%" }
-    ]
-  },
-  {
-    specialty: "Doctors",
-    icon: DoctorIcon,
-    title: "Urgent Care Volume Surge",
-    metric: "+210%",
-    metricLabel: "Online Bookings",
-    desc: "Implementing AI-driven intake and real-time wait times to capture patient demand during peak flu season and beyond.",
-    tags: ["AI Chatbot", "Local SEO", "Web Design"],
-    stats: [
-      { label: "Wait Time Reduction", value: "-35%" },
-      { label: "Patient Satisfaction", value: "4.8/5" }
-    ]
-  }
-];
-
-// Helper to get icon for specialty
-function getSpecialtyIcon(specialty: string | null) {
-  switch (specialty) {
-    case "Doctors": return DoctorIcon;
-    case "Dentists": return DentistIcon;
-    case "Pharmacies": return PharmacyIcon;
-    case "PT/OT": return PTOTIcon;
-    default: return DoctorIcon;
-  }
-}
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  DollarSign,
+  Phone,
+  BarChart3,
+} from "lucide-react";
 
 export default function Results() {
-  // Fetch testimonials from database
-  const { data: testimonials, isLoading: testimonialsLoading } = trpc.testimonials.getVisible.useQuery();
+  const caseStudies = [
+    {
+      practice: "Premier Implant Center",
+      location: "Dallas, TX",
+      specialty: "Full-Arch / All-on-4",
+      challenge:
+        "Had been working with a large implant marketing agency for 8 months with declining lead quality and no visibility into ad spend. Doctor was frustrated and ready to quit marketing entirely.",
+      approach:
+        "P90 Protocol onboarding with full workflow audit, team retraining on lead management, custom video production, and a rebuilt campaign strategy focused on their unique sedation-first approach.",
+      results: [
+        { metric: "Full-Arch Consultations", before: "8/mo", after: "32/mo" },
+        { metric: "Case Acceptance Rate", before: "28%", after: "52%" },
+        { metric: "Cost Per Qualified Lead", before: "$420", after: "$185" },
+        { metric: "Monthly Implant Revenue", before: "$95K", after: "$340K" },
+      ],
+      quote:
+        "For the first time, I actually know where my money is going and I can see the results in my schedule. Propel didn't just fix our marketing — they fixed our entire patient intake process.",
+      doctor: "Dr. Michael Torres",
+    },
+    {
+      practice: "Smile Architects",
+      location: "Charlotte, NC",
+      specialty: "Implants & Cosmetic",
+      challenge:
+        "New practice trying to establish a full-arch program. No existing patient base for implants, competing against 4 established implant practices in the market, and a team with no experience handling high-value cases.",
+      approach:
+        "Ground-up brand development, in-office case acceptance training, custom videography featuring the doctor's personal story, and a phased campaign launch targeting underserved zip codes.",
+      results: [
+        { metric: "Full-Arch Cases (Monthly)", before: "0", after: "6" },
+        { metric: "Implant Revenue", before: "$0", after: "$180K/mo" },
+        { metric: "Google Reviews", before: "12", after: "87" },
+        { metric: "New Patient Calls", before: "15/mo", after: "85/mo" },
+      ],
+      quote:
+        "We went from zero implant cases to a full schedule in under 6 months. The P90 training was a game-changer for my team — they went from nervous about implant conversations to confident and closing.",
+      doctor: "Dr. Amanda Chen",
+    },
+    {
+      practice: "Tri-State Oral Surgery",
+      location: "Philadelphia, PA",
+      specialty: "Oral Surgery & Full-Arch",
+      challenge:
+        "Established oral surgery practice wanting to grow their full-arch program. Previous agency was running the same ads as 3 other practices in the area. Doctor felt like a commodity.",
+      approach:
+        "Complete brand differentiation strategy, custom content highlighting their surgical expertise and technology, community-focused marketing, and a referral program for general dentists.",
+      results: [
+        { metric: "Full-Arch Starts", before: "4/mo", after: "14/mo" },
+        { metric: "Referring Dentists", before: "8", after: "34" },
+        { metric: "Average Case Value", before: "$22K", after: "$28K" },
+        { metric: "Patient Satisfaction", before: "4.2", after: "4.9" },
+      ],
+      quote:
+        "Propel understood that we're not just another implant mill. They built our marketing around our surgical expertise and our commitment to patient care. The referral program alone has been worth the investment.",
+      doctor: "Dr. Robert Patel",
+    },
+  ];
 
   return (
     <Layout>
-      <div className="bg-background min-h-screen">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-muted/30 to-background border-b border-border">
-          <div className="container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold tracking-wider uppercase mb-4">
-                <GrowthPulseIcon size={16} />
-                Proven Results
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
-                Real Growth. Real Numbers.
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                We don't hide behind vanity metrics. See how we've transformed <strong>doctors, dentists, pharmacies, and PT/OT clinics</strong> just like yours.
-              </p>
-              
-              {/* Specialty Filter Pills */}
-              <div className="flex flex-wrap justify-center gap-3">
-                {[
-                  { icon: DoctorIcon, name: "Doctors" },
-                  { icon: DentistIcon, name: "Dentists" },
-                  { icon: PharmacyIcon, name: "Pharmacies" },
-                  { icon: PTOTIcon, name: "PT / OT" },
-                ].map((s) => (
-                  <span 
-                    key={s.name} 
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-border text-sm font-medium rounded-full hover:border-secondary hover:bg-secondary/5 transition-colors cursor-pointer"
-                  >
-                    <s.icon size={18} />
-                    {s.name}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Client Testimonials Section (Dynamic from Database) */}
-        {testimonials && testimonials.length > 0 && (
-          <section className="py-20 bg-muted/20">
-            <div className="container">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  What Our Clients Say
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Real testimonials from healthcare practices we've helped grow
-                </p>
-              </motion.div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, i) => {
-                  const SpecialtyIcon = getSpecialtyIcon(testimonial.specialty);
-                  return (
-                    <motion.div
-                      key={testimonial.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.1, duration: 0.5 }}
-                    >
-                      <Card className="h-full bg-white border-l-4 border-l-secondary">
-                        <CardContent className="pt-6">
-                          {/* Quote Icon */}
-                          <Quote className="w-8 h-8 text-secondary/30 mb-4" />
-                          
-                          {/* Quote Text */}
-                          <p className="text-muted-foreground italic mb-6 leading-relaxed">
-                            "{testimonial.quote}"
-                          </p>
-                          
-                          {/* Metrics */}
-                          {(testimonial.growthPercent || testimonial.newPatientsPerMonth) && (
-                            <div className="flex gap-4 mb-6 p-3 bg-muted/50 rounded-lg">
-                              {testimonial.growthPercent && (
-                                <div className="text-center">
-                                  <div className="text-2xl font-bold text-primary">+{testimonial.growthPercent}%</div>
-                                  <div className="text-xs text-muted-foreground">Growth</div>
-                                </div>
-                              )}
-                              {testimonial.newPatientsPerMonth && (
-                                <div className="text-center">
-                                  <div className="text-2xl font-bold text-secondary">{testimonial.newPatientsPerMonth}</div>
-                                  <div className="text-xs text-muted-foreground">New Patients/Mo</div>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                          
-                          {/* Client Info */}
-                          <div className="flex items-center gap-3 pt-4 border-t border-border">
-                            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                              <SpecialtyIcon size={24} />
-                            </div>
-                            <div>
-                              <div className="font-semibold text-foreground">{testimonial.clientName}</div>
-                              {testimonial.practiceName && (
-                                <div className="text-sm text-muted-foreground">{testimonial.practiceName}</div>
-                              )}
-                              {testimonial.location && (
-                                <div className="text-xs text-muted-foreground">{testimonial.location}</div>
-                              )}
-                            </div>
-                            <div className="ml-auto flex gap-0.5">
-                              {[...Array(testimonial.rating || 5)].map((_, starI) => (
-                                <Star key={starI} className="w-4 h-4 text-yellow-400 fill-current" />
-                              ))}
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  );
-                })}
-              </div>
+      {/* HERO */}
+      <section className="py-20 md:py-28 border-b border-border">
+        <div className="container mx-auto">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6">
+              <BarChart3 className="w-4 h-4" />
+              Results & Case Studies
             </div>
-          </section>
-        )}
-
-        {/* Loading State for Testimonials */}
-        {testimonialsLoading && (
-          <section className="py-12 bg-muted/20">
-            <div className="container flex justify-center">
-              <Loader2 className="h-8 w-8 animate-spin text-primary" />
-            </div>
-          </section>
-        )}
-
-        {/* Case Studies Grid */}
-        <section className="py-20">
-          <div className="container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Case Studies
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Detailed breakdowns of how we've helped practices achieve measurable growth
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {CASE_STUDIES.map((study, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                >
-                  <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-t-4 border-t-secondary">
-                    <CardHeader>
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="flex items-center gap-2">
-                          <study.icon size={24} />
-                          <Badge variant="secondary" className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                            {study.specialty}
-                          </Badge>
-                        </div>
-                        <div className="flex gap-1">
-                          {[1, 2, 3, 4, 5].map((_, starI) => (
-                            <Star key={starI} className="w-3 h-3 text-yellow-400 fill-current" />
-                          ))}
-                        </div>
-                      </div>
-                      <CardTitle className="text-xl font-bold mb-2">{study.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="mb-6 p-4 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg text-center border border-border">
-                        <div className="text-4xl font-bold text-primary mb-1">{study.metric}</div>
-                        <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                          {study.metricLabel}
-                        </div>
-                      </div>
-                      
-                      <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                        {study.desc}
-                      </p>
-
-                      <div className="grid grid-cols-2 gap-4 mb-6 border-t border-border pt-4">
-                        {study.stats.map((stat, statI) => (
-                          <div key={statI}>
-                            <div className="text-lg font-bold text-foreground">{stat.value}</div>
-                            <div className="text-xs text-muted-foreground">{stat.label}</div>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {study.tags.map((tag, tagI) => (
-                          <span key={tagI} className="text-xs bg-background border border-border px-2 py-1 rounded text-muted-foreground">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <Button variant="outline" className="w-full group border-secondary text-secondary hover:bg-secondary hover:text-white">
-                        Read Case Study <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Banner */}
-        <section className="py-16 bg-muted/30 border-y border-border">
-          <div className="container">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {[
-                { value: "500+", label: "Practices Served" },
-                { value: "$50M+", label: "Revenue Generated" },
-                { value: "32%", label: "Avg. Growth Rate" },
-                { value: "4.9/5", label: "Client Satisfaction" },
-              ].map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-primary text-white">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to be our next success story?</h2>
-            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              Join the hundreds of doctors, dentists, pharmacies, and PT/OT clinics that have switched to the performance-based model.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
+              Real Practices.{" "}
+              <span className="text-primary">Real Results.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
+              We believe in full transparency — and that includes showing you exactly what
+              we've done for our partners. These are real case studies with real numbers from
+              real implant practices.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {[
-                { icon: DoctorIcon, name: "Doctors" },
-                { icon: DentistIcon, name: "Dentists" },
-                { icon: PharmacyIcon, name: "Pharmacies" },
-                { icon: PTOTIcon, name: "PT / OT" },
-              ].map((s) => (
-                <span key={s.name} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white text-sm font-medium rounded-full">
-                  <s.icon size={16} />
-                  {s.name}
-                </span>
-              ))}
-            </div>
-            <IntakeForm trigger={
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-bold h-14 px-8 text-lg">
-                Start Your Growth Journey
-              </Button>
-            } />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* AGGREGATE STATS */}
+      <section className="py-16 border-b border-border bg-primary/5">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: <TrendingUp className="w-5 h-5" />, stat: "3.5x", label: "Average increase in full-arch consultations" },
+              { icon: <DollarSign className="w-5 h-5" />, stat: "52%", label: "Average improvement in case acceptance" },
+              { icon: <Users className="w-5 h-5" />, stat: "94%", label: "Partner retention rate" },
+              { icon: <Phone className="w-5 h-5" />, stat: "<2 min", label: "Average speed-to-lead after P90 training" },
+            ].map((item, i) => (
+              <div key={i} className="text-center p-6 rounded-lg border border-border bg-card">
+                <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-3">
+                  {item.icon}
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{item.stat}</div>
+                <p className="text-xs text-muted-foreground">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CASE STUDIES */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto space-y-20">
+          {caseStudies.map((study, i) => (
+            <div key={i} className="border border-border rounded-lg overflow-hidden bg-card">
+              <div className="p-8 border-b border-border bg-primary/5">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h2 className="text-2xl font-bold">{study.practice}</h2>
+                    <p className="text-muted-foreground">{study.location} — {study.specialty}</p>
+                  </div>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="w-5 h-5 text-primary fill-primary" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h3 className="text-sm font-bold text-destructive uppercase tracking-wider mb-3">The Challenge</h3>
+                    <p className="text-muted-foreground leading-relaxed">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-3">Our Approach</h3>
+                    <p className="text-muted-foreground leading-relaxed">{study.approach}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                  {study.results.map((result, j) => (
+                    <div key={j} className="p-4 rounded-lg border border-border bg-background text-center">
+                      <p className="text-xs text-muted-foreground mb-2">{result.metric}</p>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-sm text-muted-foreground line-through">{result.before}</span>
+                        <ArrowRight className="w-3 h-3 text-primary" />
+                        <span className="text-lg font-bold text-primary">{result.after}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <blockquote className="border-l-4 border-primary pl-6 py-2">
+                  <p className="text-foreground italic leading-relaxed mb-2">"{study.quote}"</p>
+                  <cite className="text-sm text-muted-foreground not-italic">— {study.doctor}, {study.practice}</cite>
+                </blockquote>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 md:py-28 border-t border-border bg-card">
+        <div className="container mx-auto text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Want Results Like These?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+              Every case study started with a single conversation. Let's talk about your
+              practice, your market, and what's possible.
+            </p>
+            <IntakeForm
+              trigger={
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-14 px-8 text-lg">
+                  Book a Strategy Call <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              }
+            />
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
