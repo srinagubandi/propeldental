@@ -51,7 +51,7 @@ export default function FullArchMarketing() {
       icon: <Tv className="w-6 h-6" />,
       title: "TV & Streaming Advertising",
       description:
-        "Reach patients where they spend their evenings — on connected TV and streaming platforms. We produce broadcast-quality commercials and place them on Hulu, Roku, Amazon Fire TV, Peacock, and local broadcast.",
+        "Reach patients where they spend their evenings  - on connected TV and streaming platforms. We produce broadcast-quality commercials and place them on Hulu, Roku, Amazon Fire TV, Peacock, and local broadcast.",
       features: [
         "30-second and 60-second TV commercials",
         "Connected TV / OTT placement",
@@ -132,7 +132,7 @@ export default function FullArchMarketing() {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
               We don't hand you a media plan and disappear. We embed ourselves in your practice,
               learn what makes you different, and build a marketing engine that's authentically
-              yours. Every ad, every video, every strategy — custom-built for your full-arch practice.
+              yours. Every ad, every video, every strategy  - custom-built for your full-arch practice.
             </p>
             <IntakeForm
               trigger={
@@ -190,7 +190,7 @@ export default function FullArchMarketing() {
               Every Platform Your Patients Use
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We manage your presence across every consumer-facing social platform — with content
+              We manage your presence across every consumer-facing social platform  - with content
               and campaigns tailored to how each platform works and who uses it.
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function FullArchMarketing() {
         </div>
       </section>
 
-      {/* SEO SECTION — OTHER SPECIALTIES */}
+      {/* SEO SECTION  - OTHER SPECIALTIES */}
       <section className="py-20 md:py-28 border-t border-border">
         <div className="container mx-auto">
           <div className="max-w-3xl mb-12">
@@ -287,7 +287,7 @@ export default function FullArchMarketing() {
             </h2>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
               Every partnership starts with a conversation. Tell us about your practice, your
-              goals, and your frustrations — and we'll show you exactly how we'd approach your
+              goals, and your frustrations  - and we'll show you exactly how we'd approach your
               market.
             </p>
             <IntakeForm

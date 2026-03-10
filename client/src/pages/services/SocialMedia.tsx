@@ -19,7 +19,7 @@ export default function SocialMedia() {
               <span className="text-primary">Implant Practices</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
-              Full-arch patients don't just Google — they scroll. They watch before-and-after
+              Full-arch patients don't just Google  - they scroll. They watch before-and-after
               transformations on Instagram, research providers on Facebook, and discover practices
               through TikTok. We build social strategies that turn scrollers into consultations.
             </p>
@@ -40,7 +40,7 @@ export default function SocialMedia() {
           <h2 className="text-3xl font-bold mb-4">Every Platform That Matters</h2>
           <p className="text-muted-foreground mb-12 max-w-2xl">
             We manage your presence across every consumer-facing platform where implant patients
-            spend their time — with content tailored to each platform's audience and algorithm.
+            spend their time  - with content tailored to each platform's audience and algorithm.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -56,7 +56,7 @@ export default function SocialMedia() {
               },
               {
                 name: "TikTok",
-                desc: "Short-form video that humanizes your practice — smile reveals, day-in-the-life content, myth-busting, and educational clips that go viral in local markets.",
+                desc: "Short-form video that humanizes your practice  - smile reveals, day-in-the-life content, myth-busting, and educational clips that go viral in local markets.",
                 stat: "1.5B+ monthly users",
               },
               {
@@ -102,7 +102,7 @@ export default function SocialMedia() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: <Video className="w-5 h-5" />, title: "Before & After Reveals", desc: "The most powerful content in implant marketing. We produce cinematic smile transformations that stop the scroll and drive inquiries." },
-              { icon: <Users className="w-5 h-5" />, title: "Patient Testimonials", desc: "Real patients sharing their journey — from consultation fears to life-changing results. Authentic stories that overcome objections." },
+              { icon: <Users className="w-5 h-5" />, title: "Patient Testimonials", desc: "Real patients sharing their journey  - from consultation fears to life-changing results. Authentic stories that overcome objections." },
               { icon: <MessageCircle className="w-5 h-5" />, title: "Doctor Thought Leadership", desc: "Position your doctors as the go-to implant experts in your market with educational content, myth-busting, and Q&A sessions." },
               { icon: <Eye className="w-5 h-5" />, title: "Behind the Scenes", desc: "Day-in-the-life content, office tours, team introductions, and procedure prep that humanizes your practice and reduces patient anxiety." },
               { icon: <TrendingUp className="w-5 h-5" />, title: "Paid Social Campaigns", desc: "Targeted ad campaigns on Facebook, Instagram, and TikTok reaching high-intent implant patients in your specific market radius." },

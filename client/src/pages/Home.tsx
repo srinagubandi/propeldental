@@ -106,7 +106,7 @@ export default function Home() {
               {
                 title: "No More Fly-By-Night Agencies",
                 description:
-                  "Our team brings years of experience in implant dentistry marketing specifically. This isn't a side hustle — it's all we do.",
+                  "Our team brings years of experience in implant dentistry marketing specifically. This isn't a side hustle  - it's all we do.",
               },
               {
                 title: "No More Wasted First 90 Days",
@@ -116,7 +116,7 @@ export default function Home() {
               {
                 title: "No More One-Size-Fits-All",
                 description:
-                  "We learn your market, your strengths, your team. Then we build a strategy that's uniquely yours — because your practice is unique.",
+                  "We learn your market, your strengths, your team. Then we build a strategy that's uniquely yours  - because your practice is unique.",
               },
             ].map((item, i) => (
               <div
@@ -228,7 +228,7 @@ export default function Home() {
               { icon: <Users className="w-6 h-6" />, title: "Limited Clients", desc: "We cap our client list so every partner gets our full attention and resources." },
               { icon: <Target className="w-6 h-6" />, title: "Custom Everything", desc: "No templates. Every ad, video, and strategy is built from your practice's DNA." },
               { icon: <Eye className="w-6 h-6" />, title: "Full Transparency", desc: "See every dollar, every metric, every decision. No hidden fees or black-box reporting." },
-              { icon: <Award className="w-6 h-6" />, title: "Deep Expertise", desc: "Industry veterans in implant marketing — not generalists learning on your dime." },
+              { icon: <Award className="w-6 h-6" />, title: "Deep Expertise", desc: "Industry veterans in implant marketing  - not generalists learning on your dime." },
             ].map((item, i) => (
               <div key={i} className="text-center p-6 rounded-lg border border-border bg-card hover:border-primary/30 transition-colors">
                 <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4">
@@ -250,7 +250,7 @@ export default function Home() {
               Built for Results. Measured by Transparency.
             </h2>
             <p className="text-lg text-muted-foreground">
-              We don't just promise growth — we prove it with numbers you can see and verify.
+              We don't just promise growth  - we prove it with numbers you can see and verify.
             </p>
           </div>
 
@@ -284,14 +284,14 @@ export default function Home() {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               From custom ad creation to in-office training, we handle every aspect of your
-              implant marketing so you can focus on what you do best — changing lives.
+              implant marketing so you can focus on what you do best  - changing lives.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Custom Ad Creation & Video Production", desc: "Professional videography, patient testimonials, practice films, and ad creative built around your unique story." },
-              { title: "Targeted Digital Advertising", desc: "Facebook, Instagram, TikTok, YouTube, Google Ads, and streaming TV — all targeted to your ideal full-arch patients." },
+              { title: "Targeted Digital Advertising", desc: "Facebook, Instagram, TikTok, YouTube, Google Ads, and streaming TV  - all targeted to your ideal full-arch patients." },
               { title: "Lead Management & Qualification", desc: "Systems and training to ensure every lead is properly handled, qualified, and converted into a consultation." },
               { title: "Case Acceptance Training", desc: "In-office coaching for your team on presenting treatment plans, handling objections, and closing full-arch cases." },
               { title: "Practice Brand Development", desc: "Discover and amplify what makes your practice unique. Build a brand that stands out in your community." },
@@ -324,7 +324,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
               This isn't a sales pitch. It's a real strategy conversation about your practice,
               your market, and whether we're the right fit. We're selective about who we work
-              with — and we think you should be too.
+              with  - and we think you should be too.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <IntakeForm

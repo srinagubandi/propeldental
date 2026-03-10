@@ -21,7 +21,7 @@ export default function VideoProduction() {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
               Full-arch is a visual story. Before-and-after transformations, patient testimonials,
               and doctor introductions are the most powerful tools in implant marketing. We produce
-              broadcast-quality video — from social clips to TV commercials.
+              broadcast-quality video  - from social clips to TV commercials.
             </p>
             <IntakeForm
               trigger={
@@ -40,7 +40,7 @@ export default function VideoProduction() {
           <h2 className="text-3xl font-bold mb-4">Video Content We Produce</h2>
           <p className="text-muted-foreground mb-12 max-w-2xl">
             From 15-second TikToks to 30-second TV spots, we handle every aspect of video
-            production — scripting, filming, editing, and distribution.
+            production  - scripting, filming, editing, and distribution.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -52,7 +52,7 @@ export default function VideoProduction() {
               {
                 icon: <Film className="w-5 h-5" />,
                 title: "Patient Testimonials",
-                desc: "Authentic, emotionally compelling interviews with real patients sharing their journey — from fear and frustration to confidence and gratitude.",
+                desc: "Authentic, emotionally compelling interviews with real patients sharing their journey  - from fear and frustration to confidence and gratitude.",
               },
               {
                 icon: <Clapperboard className="w-5 h-5" />,
@@ -62,7 +62,7 @@ export default function VideoProduction() {
               {
                 icon: <Play className="w-5 h-5" />,
                 title: "Short-Form Social Content",
-                desc: "TikTok, Instagram Reels, YouTube Shorts — scroll-stopping clips optimized for each platform's algorithm and audience behavior.",
+                desc: "TikTok, Instagram Reels, YouTube Shorts  - scroll-stopping clips optimized for each platform's algorithm and audience behavior.",
               },
               {
                 icon: <Monitor className="w-5 h-5" />,
@@ -93,13 +93,13 @@ export default function VideoProduction() {
               <h2 className="text-3xl font-bold mb-6">TV & Connected TV Advertising</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Television isn't dead — it's evolved. Connected TV (CTV) and Over-the-Top (OTT)
+                  Television isn't dead  - it's evolved. Connected TV (CTV) and Over-the-Top (OTT)
                   streaming platforms now offer the targeting precision of digital with the
                   credibility and impact of broadcast television.
                 </p>
                 <p>
                   We produce and place TV commercials across broadcast, cable, and streaming
-                  platforms — reaching implant candidates in your market with the production
+                  platforms  - reaching implant candidates in your market with the production
                   quality that builds instant credibility.
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function VideoProduction() {
                 { name: "Broadcast & Cable TV", desc: "Local network and cable placements targeting your DMA with professionally produced 30-second and 60-second spots." },
                 { name: "Hulu, Peacock, Paramount+", desc: "Premium streaming placements with demographic and geographic targeting that reaches cord-cutters." },
                 { name: "Roku & Amazon Fire TV", desc: "CTV advertising on the two largest streaming device platforms with household-level targeting." },
-                { name: "YouTube Pre-Roll", desc: "Targeted video ads before dental, health, and lifestyle content — reaching patients already in a research mindset." },
+                { name: "YouTube Pre-Roll", desc: "Targeted video ads before dental, health, and lifestyle content  - reaching patients already in a research mindset." },
               ].map((item, i) => (
                 <div key={i} className="p-4 rounded-lg border border-border bg-background">
                   <h3 className="font-semibold text-sm mb-1">{item.name}</h3>
@@ -128,7 +128,7 @@ export default function VideoProduction() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { step: "01", title: "Strategy & Scripting", desc: "We develop the creative concept, script, and shot list based on your goals, your patients, and your market." },
-              { step: "02", title: "On-Location Filming", desc: "Our production team comes to your practice with professional equipment — cameras, lighting, audio, and direction." },
+              { step: "02", title: "On-Location Filming", desc: "Our production team comes to your practice with professional equipment  - cameras, lighting, audio, and direction." },
               { step: "03", title: "Post-Production", desc: "Professional editing, color grading, motion graphics, music licensing, and platform-specific formatting." },
               { step: "04", title: "Distribution & Placement", desc: "We handle media buying and placement across social, streaming, YouTube, and broadcast channels." },
             ].map((item, i) => (

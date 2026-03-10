@@ -21,7 +21,7 @@ export default function PaidSearch() {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
               When a patient searches "All-on-4 dentist near me," you need to be the first
               thing they see. Our paid search campaigns are built exclusively for high-value
-              implant cases — not $200 cleanings.
+              implant cases  - not $200 cleanings.
             </p>
             <IntakeForm
               trigger={
@@ -46,7 +46,7 @@ export default function PaidSearch() {
                 "150 leads this month!" but only 3 were actual implant inquiries.
               </p>
               <p>
-                The problem isn't Google Ads — it's the strategy. Generic dental PPC campaigns
+                The problem isn't Google Ads  - it's the strategy. Generic dental PPC campaigns
                 cast too wide a net. Full-arch PPC requires a fundamentally different approach:
                 different keywords, different landing pages, different qualification, and different
                 conversion tracking.
@@ -63,9 +63,9 @@ export default function PaidSearch() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: <Target className="w-5 h-5" />, title: "Implant-Only Targeting", desc: "We build campaigns around high-intent implant keywords only. No cleanings, no whitening, no price shoppers. Every dollar goes toward $25K+ cases." },
-              { icon: <MousePointerClick className="w-5 h-5" />, title: "Custom Landing Pages", desc: "Dedicated landing pages for each procedure — All-on-4, full-arch, implant-supported dentures — with conversion-optimized design and copy." },
+              { icon: <MousePointerClick className="w-5 h-5" />, title: "Custom Landing Pages", desc: "Dedicated landing pages for each procedure  - All-on-4, full-arch, implant-supported dentures  - with conversion-optimized design and copy." },
               { icon: <DollarSign className="w-5 h-5" />, title: "Revenue-Based Tracking", desc: "We don't just track clicks and leads. We track which campaigns produce actual consultations and closed cases, so you know your true ROI." },
-              { icon: <Shield className="w-5 h-5" />, title: "Negative Keyword Strategy", desc: "Aggressive negative keyword management to eliminate waste — no 'cheap,' 'free,' 'insurance,' or irrelevant procedure clicks eating your budget." },
+              { icon: <Shield className="w-5 h-5" />, title: "Negative Keyword Strategy", desc: "Aggressive negative keyword management to eliminate waste  - no 'cheap,' 'free,' 'insurance,' or irrelevant procedure clicks eating your budget." },
               { icon: <Zap className="w-5 h-5" />, title: "Rapid Testing & Optimization", desc: "Continuous A/B testing of ad copy, landing pages, and bidding strategies. We optimize weekly, not monthly." },
               { icon: <BarChart3 className="w-5 h-5" />, title: "Transparent Reporting", desc: "Full access to your ad accounts. Monthly reports showing spend, leads, cost per lead, consultations booked, and revenue generated." },
             ].map((item, i) => (
@@ -105,7 +105,7 @@ export default function PaidSearch() {
           <h2 className="text-3xl font-bold mb-12">What We Optimize For</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { metric: "Cost Per Lead", desc: "Not just any lead — qualified implant inquiries" },
+              { metric: "Cost Per Lead", desc: "Not just any lead  - qualified implant inquiries" },
               { metric: "Consultation Rate", desc: "Percentage of leads that book a consultation" },
               { metric: "Case Acceptance", desc: "Tracking from click to closed treatment plan" },
               { metric: "Revenue per $1 Spent", desc: "The only metric that truly matters" },
@@ -125,7 +125,7 @@ export default function PaidSearch() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Stop Paying for Cleaning Leads</h2>
             <p className="text-lg text-muted-foreground mb-10">
-              Get a free PPC audit — we'll show you exactly how much of your current ad spend
+              Get a free PPC audit  - we'll show you exactly how much of your current ad spend
               is wasted on non-implant clicks and what a focused strategy could deliver.
             </p>
             <IntakeForm

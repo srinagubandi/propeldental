@@ -48,7 +48,7 @@ export default function AEO() {
               for Dental Practices
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
-              Patients are no longer just typing keywords into Google — they're asking AI tools
+              Patients are no longer just typing keywords into Google  - they're asking AI tools
               like ChatGPT, Perplexity, Google's AI Overviews, and voice assistants direct questions
               about dental care. AEO ensures your practice is the answer.
             </p>
@@ -65,15 +65,15 @@ export default function AEO() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Answer Engine Optimization (AEO) is the practice of structuring your dental
-                  practice's online content so that AI-powered search tools — ChatGPT, Google's
+                  practice's online content so that AI-powered search tools  - ChatGPT, Google's
                   AI Overviews (formerly SGE), Perplexity, Bing Copilot, and voice assistants
-                  like Siri and Alexa — can find, understand, and directly cite your practice
+                  like Siri and Alexa  - can find, understand, and directly cite your practice
                   when patients ask questions.
                 </p>
                 <p>
                   Unlike traditional SEO, which focuses on ranking your website in a list of
                   blue links, AEO focuses on being <strong>selected as the direct answer</strong>.
-                  When a patient asks "Who is the best implant dentist in Dallas?" — AEO
+                  When a patient asks "Who is the best implant dentist in Dallas?"  - AEO
                   determines whether your practice is the one the AI recommends.
                 </p>
                 <p>
@@ -145,7 +145,7 @@ export default function AEO() {
               {
                 icon: <Search className="w-5 h-5" />,
                 title: "Build Topical Authority",
-                desc: "Create comprehensive content clusters around each procedure. A single page on 'dental implants' isn't enough — you need interconnected content covering cost, process, recovery, alternatives, candidacy, and more.",
+                desc: "Create comprehensive content clusters around each procedure. A single page on 'dental implants' isn't enough  - you need interconnected content covering cost, process, recovery, alternatives, candidacy, and more.",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-lg border border-border bg-card">
@@ -169,19 +169,19 @@ export default function AEO() {
             <FAQAccordion items={[
               {
                 q: "What is Answer Engine Optimization (AEO)?",
-                a: "AEO is the practice of optimizing your dental practice's online content so that AI-powered tools — like ChatGPT, Google's AI Overviews, Perplexity, and voice assistants — can find, understand, and directly recommend your practice when patients ask questions. It goes beyond traditional SEO by focusing on being selected as the direct answer, not just ranking on a results page.",
+                a: "AEO is the practice of optimizing your dental practice's online content so that AI-powered tools  - like ChatGPT, Google's AI Overviews, Perplexity, and voice assistants  - can find, understand, and directly recommend your practice when patients ask questions. It goes beyond traditional SEO by focusing on being selected as the direct answer, not just ranking on a results page.",
               },
               {
                 q: "How is AEO different from traditional SEO?",
-                a: "Traditional SEO focuses on ranking your website in search engine results pages (SERPs) so patients click through to your site. AEO focuses on structuring your content so AI systems can cite your practice directly in their answers — often without the patient ever visiting your website. Both are important, but AEO addresses the growing trend of zero-click searches and AI-generated answers.",
+                a: "Traditional SEO focuses on ranking your website in search engine results pages (SERPs) so patients click through to your site. AEO focuses on structuring your content so AI systems can cite your practice directly in their answers  - often without the patient ever visiting your website. Both are important, but AEO addresses the growing trend of zero-click searches and AI-generated answers.",
               },
               {
                 q: "Why does AEO matter for dental implant practices specifically?",
-                a: "Implant patients do extensive research before choosing a provider. They ask detailed questions about cost, procedure, recovery, and alternatives — exactly the type of queries AI tools are designed to answer. If your practice isn't optimized for these AI-driven searches, you're invisible to a growing segment of high-value patients who rely on ChatGPT, voice search, and AI Overviews for their research.",
+                a: "Implant patients do extensive research before choosing a provider. They ask detailed questions about cost, procedure, recovery, and alternatives  - exactly the type of queries AI tools are designed to answer. If your practice isn't optimized for these AI-driven searches, you're invisible to a growing segment of high-value patients who rely on ChatGPT, voice search, and AI Overviews for their research.",
               },
               {
                 q: "What are zero-click searches and why should I care?",
-                a: "Zero-click searches are queries where the user gets their answer directly on the search results page — through featured snippets, AI Overviews, or knowledge panels — without clicking through to any website. Over 65% of Google searches now end without a click. For dental practices, this means your content needs to be the source that Google and AI tools pull from, even if patients never visit your site directly.",
+                a: "Zero-click searches are queries where the user gets their answer directly on the search results page  - through featured snippets, AI Overviews, or knowledge panels  - without clicking through to any website. Over 65% of Google searches now end without a click. For dental practices, this means your content needs to be the source that Google and AI tools pull from, even if patients never visit your site directly.",
               },
               {
                 q: "How do I optimize my dental website for voice search?",
@@ -189,7 +189,7 @@ export default function AEO() {
               },
               {
                 q: "What is schema markup and why does it matter for AEO?",
-                a: "Schema markup is structured data code added to your website that helps search engines and AI tools understand your content. For dental practices, key schema types include FAQ schema (for question-and-answer content), LocalBusiness/MedicalBusiness schema (for practice information), HowTo schema (for procedure explanations), and Review schema (for patient testimonials). Schema doesn't change how your site looks to patients — it changes how AI systems read and interpret your content.",
+                a: "Schema markup is structured data code added to your website that helps search engines and AI tools understand your content. For dental practices, key schema types include FAQ schema (for question-and-answer content), LocalBusiness/MedicalBusiness schema (for practice information), HowTo schema (for procedure explanations), and Review schema (for patient testimonials). Schema doesn't change how your site looks to patients  - it changes how AI systems read and interpret your content.",
               },
               {
                 q: "How do I get my dental practice recommended by ChatGPT?",
@@ -197,15 +197,15 @@ export default function AEO() {
               },
               {
                 q: "How long does it take to see results from AEO?",
-                a: "AEO is a long-term strategy. You may see improvements in featured snippets and AI Overview citations within 2-3 months of implementing structured content and schema markup. Voice search and ChatGPT visibility typically take 3-6 months as AI systems re-crawl and re-index your content. The key is consistency — regularly publishing question-based, well-structured content that builds your topical authority over time.",
+                a: "AEO is a long-term strategy. You may see improvements in featured snippets and AI Overview citations within 2-3 months of implementing structured content and schema markup. Voice search and ChatGPT visibility typically take 3-6 months as AI systems re-crawl and re-index your content. The key is consistency  - regularly publishing question-based, well-structured content that builds your topical authority over time.",
               },
               {
                 q: "Can I do AEO myself or do I need an agency?",
-                a: "Basic AEO practices — like adding FAQ sections and writing question-based content — can be done in-house. However, technical implementation (schema markup, structured data, site architecture), ongoing content strategy, and monitoring AI visibility across multiple platforms typically requires specialized expertise. At Propel Dental, AEO is built into every engagement as part of our comprehensive approach.",
+                a: "Basic AEO practices  - like adding FAQ sections and writing question-based content  - can be done in-house. However, technical implementation (schema markup, structured data, site architecture), ongoing content strategy, and monitoring AI visibility across multiple platforms typically requires specialized expertise. At Propel Dental, AEO is built into every engagement as part of our comprehensive approach.",
               },
               {
                 q: "Does AEO replace SEO?",
-                a: "No. AEO builds on top of SEO — it doesn't replace it. You still need strong traditional SEO (technical foundation, quality content, backlinks, local optimization) as the base. AEO adds a layer of optimization specifically for AI-driven search. Think of it as: SEO gets you found by search engines, AEO gets you recommended by AI. Both are essential for modern dental marketing.",
+                a: "No. AEO builds on top of SEO  - it doesn't replace it. You still need strong traditional SEO (technical foundation, quality content, backlinks, local optimization) as the base. AEO adds a layer of optimization specifically for AI-driven search. Think of it as: SEO gets you found by search engines, AEO gets you recommended by AI. Both are essential for modern dental marketing.",
               },
             ]} />
           </div>
@@ -219,7 +219,7 @@ export default function AEO() {
             <h2 className="text-3xl font-bold mb-6">Is Your Practice Visible to AI Search?</h2>
             <p className="text-lg text-muted-foreground mb-10">
               We'll audit your practice's visibility across ChatGPT, Google AI Overviews,
-              Perplexity, and voice search — and show you exactly what needs to change.
+              Perplexity, and voice search  - and show you exactly what needs to change.
             </p>
             <IntakeForm
               trigger={

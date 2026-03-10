@@ -23,7 +23,7 @@ export default function Contact() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                 Whether you're exploring your options, frustrated with your current agency, or
-                ready to build a real full-arch marketing program — we're here to have an honest
+                ready to build a real full-arch marketing program  - we're here to have an honest
                 conversation. No pressure. No pitch deck. Just a real talk about what's possible.
               </p>
 
@@ -88,7 +88,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* RIGHT SIDE — INTAKE FORM CTA */}
+            {/* RIGHT SIDE  - INTAKE FORM CTA */}
             <div className="bg-card border border-border rounded-lg p-8 md:p-10">
               <h2 className="text-2xl font-bold mb-4">Request a Strategy Call</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -141,7 +141,7 @@ export default function Contact() {
               {[
                 {
                   q: "How much does it cost?",
-                  a: "Every engagement is custom, so pricing varies based on your market, your goals, and the scope of work. We'll give you a transparent breakdown on our strategy call — no hidden fees, no surprises.",
+                  a: "Every engagement is custom, so pricing varies based on your market, your goals, and the scope of work. We'll give you a transparent breakdown on our strategy call  - no hidden fees, no surprises.",
                 },
                 {
                   q: "Do you require long-term contracts?",
@@ -153,7 +153,7 @@ export default function Contact() {
                 },
                 {
                   q: "What if I'm already working with another agency?",
-                  a: "That's fine. Many of our partners came to us from other agencies. We'll give you an honest assessment of what's working and what's not — and if we think your current agency is doing a good job, we'll tell you that too.",
+                  a: "That's fine. Many of our partners came to us from other agencies. We'll give you an honest assessment of what's working and what's not  - and if we think your current agency is doing a good job, we'll tell you that too.",
                 },
                 {
                   q: "How quickly can we start?",

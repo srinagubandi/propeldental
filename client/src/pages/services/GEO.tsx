@@ -48,7 +48,7 @@ export default function GEO() {
               for Dental Practices
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
-              AI doesn't just find information anymore — it generates answers, recommendations,
+              AI doesn't just find information anymore  - it generates answers, recommendations,
               and summaries. GEO ensures your implant practice is the one AI systems choose
               to recommend when patients ask for help finding a provider.
             </p>
@@ -65,18 +65,18 @@ export default function GEO() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Generative Engine Optimization (GEO) is the practice of structuring your
-                  dental practice's entire online presence so that AI systems — Google AI Overviews,
-                  ChatGPT, Gemini, Perplexity, and others — can understand, trust, and confidently
+                  dental practice's entire online presence so that AI systems  - Google AI Overviews,
+                  ChatGPT, Gemini, Perplexity, and others  - can understand, trust, and confidently
                   <strong> recommend</strong> your practice when generating answers for patients.
                 </p>
                 <p>
                   While AEO focuses on being the <em>answer</em> to a question, GEO focuses on
                   being the <em>recommendation</em>. When a patient asks "Who is the best
-                  All-on-4 dentist in Phoenix?" — GEO determines whether AI includes your
+                  All-on-4 dentist in Phoenix?"  - GEO determines whether AI includes your
                   practice in its generated response.
                 </p>
                 <p>
-                  AI systems are increasingly selective. They don't show every result — they
+                  AI systems are increasingly selective. They don't show every result  - they
                   synthesize information from multiple sources and recommend only the practices
                   they have the highest confidence in. GEO builds that confidence.
                 </p>
@@ -139,12 +139,12 @@ export default function GEO() {
               {
                 icon: <Shield className="w-5 h-5" />,
                 title: "Cross-Platform Consistency",
-                desc: "AI cross-checks your information across your website, Google Business Profile, review platforms, and directories. Inconsistent details (different hours, services, addresses) create uncertainty — and AI skips uncertain sources.",
+                desc: "AI cross-checks your information across your website, Google Business Profile, review platforms, and directories. Inconsistent details (different hours, services, addresses) create uncertainty  - and AI skips uncertain sources.",
               },
               {
                 icon: <Layers className="w-5 h-5" />,
                 title: "Answer-Ready Content",
-                desc: "AI systems reuse existing information — they summarize, quote, and combine content. Practices with clearly structured, answer-formatted content are far more likely to be included in AI-generated responses.",
+                desc: "AI systems reuse existing information  - they summarize, quote, and combine content. Practices with clearly structured, answer-formatted content are far more likely to be included in AI-generated responses.",
               },
               {
                 icon: <BarChart3 className="w-5 h-5" />,
@@ -154,7 +154,7 @@ export default function GEO() {
               {
                 icon: <Brain className="w-5 h-5" />,
                 title: "E-E-A-T Signals",
-                desc: "Experience, Expertise, Authoritativeness, and Trustworthiness. AI prioritizes content from practices that demonstrate real clinical expertise — doctor bios, credentials, published content, and professional affiliations.",
+                desc: "Experience, Expertise, Authoritativeness, and Trustworthiness. AI prioritizes content from practices that demonstrate real clinical expertise  - doctor bios, credentials, published content, and professional affiliations.",
               },
               {
                 icon: <Sparkles className="w-5 h-5" />,
@@ -185,22 +185,22 @@ export default function GEO() {
                 {
                   num: "01",
                   title: "Define Every Service Specifically",
-                  desc: "Don't say 'we offer dental implants.' Say 'We perform full-arch All-on-4 dental implant procedures, single-tooth implant replacements, implant-supported dentures, and zygomatic implants for patients with bone loss — at our practice in [city].' Specificity is what AI needs to match your practice to patient queries.",
+                  desc: "Don't say 'we offer dental implants.' Say 'We perform full-arch All-on-4 dental implant procedures, single-tooth implant replacements, implant-supported dentures, and zygomatic implants for patients with bone loss  - at our practice in [city].' Specificity is what AI needs to match your practice to patient queries.",
                 },
                 {
                   num: "02",
                   title: "Maintain Absolute Cross-Platform Consistency",
-                  desc: "Your practice name, address, phone number, hours, services, and doctor names must be identical across your website, Google Business Profile, Yelp, Healthgrades, ZocDoc, and every directory you're listed on. AI cross-references these sources — any inconsistency reduces confidence.",
+                  desc: "Your practice name, address, phone number, hours, services, and doctor names must be identical across your website, Google Business Profile, Yelp, Healthgrades, ZocDoc, and every directory you're listed on. AI cross-references these sources  - any inconsistency reduces confidence.",
                 },
                 {
                   num: "03",
                   title: "Structure Content as Reusable Answers",
-                  desc: "Write content that AI can easily extract and reuse. Use clear headings, concise paragraphs, and direct answers to specific questions. Think of every section as a potential AI citation — if it can't stand alone as a clear answer, restructure it.",
+                  desc: "Write content that AI can easily extract and reuse. Use clear headings, concise paragraphs, and direct answers to specific questions. Think of every section as a potential AI citation  - if it can't stand alone as a clear answer, restructure it.",
                 },
                 {
                   num: "04",
                   title: "Build a Systematic Review Strategy",
-                  desc: "AI heavily weighs review signals — volume, recency, and sentiment. Implement a systematic process for requesting reviews after every successful treatment. Respond to every review (positive and negative) to show active engagement.",
+                  desc: "AI heavily weighs review signals  - volume, recency, and sentiment. Implement a systematic process for requesting reviews after every successful treatment. Respond to every review (positive and negative) to show active engagement.",
                 },
                 {
                   num: "05",
@@ -247,15 +247,15 @@ export default function GEO() {
             <FAQAccordion items={[
               {
                 q: "What is Generative Engine Optimization (GEO)?",
-                a: "GEO is the practice of optimizing your dental practice's entire online presence so that AI systems — Google AI Overviews, ChatGPT, Gemini, Perplexity — can understand, trust, and confidently recommend your practice when generating answers for patients. It focuses on being selected as a recommendation, not just appearing in search results.",
+                a: "GEO is the practice of optimizing your dental practice's entire online presence so that AI systems  - Google AI Overviews, ChatGPT, Gemini, Perplexity  - can understand, trust, and confidently recommend your practice when generating answers for patients. It focuses on being selected as a recommendation, not just appearing in search results.",
               },
               {
                 q: "How is GEO different from AEO?",
-                a: "AEO (Answer Engine Optimization) focuses on being the direct answer to a specific question — like 'How much do dental implants cost?' GEO goes further by focusing on being the recommended practice when AI generates responses to broader queries — like 'Who is the best implant dentist in [city]?' AEO is about answering questions; GEO is about earning recommendations.",
+                a: "AEO (Answer Engine Optimization) focuses on being the direct answer to a specific question  - like 'How much do dental implants cost?' GEO goes further by focusing on being the recommended practice when AI generates responses to broader queries  - like 'Who is the best implant dentist in [city]?' AEO is about answering questions; GEO is about earning recommendations.",
               },
               {
                 q: "Does GEO replace traditional SEO?",
-                a: "No. GEO builds on top of SEO — it extends it. Traditional SEO provides the foundation: technical health, quality content, backlinks, and local optimization. GEO adds a layer that specifically addresses how AI systems interpret, synthesize, and recommend from those SEO signals. Without strong SEO, there's nothing for GEO to build on.",
+                a: "No. GEO builds on top of SEO  - it extends it. Traditional SEO provides the foundation: technical health, quality content, backlinks, and local optimization. GEO adds a layer that specifically addresses how AI systems interpret, synthesize, and recommend from those SEO signals. Without strong SEO, there's nothing for GEO to build on.",
               },
               {
                 q: "Why isn't my dental practice showing up in AI search results?",
@@ -271,7 +271,7 @@ export default function GEO() {
               },
               {
                 q: "Can GEO help with visibility in ChatGPT and Perplexity?",
-                a: "Yes. ChatGPT and Perplexity pull from web content, citations, and increasingly from real-time search. GEO strategies — consistent information, authoritative content, strong reviews, and structured data — directly influence whether these tools mention and recommend your practice. The key is building a comprehensive, trustworthy online presence that AI can confidently cite.",
+                a: "Yes. ChatGPT and Perplexity pull from web content, citations, and increasingly from real-time search. GEO strategies  - consistent information, authoritative content, strong reviews, and structured data  - directly influence whether these tools mention and recommend your practice. The key is building a comprehensive, trustworthy online presence that AI can confidently cite.",
               },
               {
                 q: "How do I measure GEO success?",
@@ -279,7 +279,7 @@ export default function GEO() {
               },
               {
                 q: "How long does GEO take to show results?",
-                a: "GEO is a cumulative strategy. Initial improvements (schema markup, content restructuring) can show results in 2-4 months. Building the review volume, content depth, and cross-platform consistency that drives AI recommendations typically takes 4-6 months. Full topical authority — where AI consistently recommends your practice — is a 6-12 month investment.",
+                a: "GEO is a cumulative strategy. Initial improvements (schema markup, content restructuring) can show results in 2-4 months. Building the review volume, content depth, and cross-platform consistency that drives AI recommendations typically takes 4-6 months. Full topical authority  - where AI consistently recommends your practice  - is a 6-12 month investment.",
               },
               {
                 q: "What's the relationship between reviews and GEO?",
@@ -297,7 +297,7 @@ export default function GEO() {
             <h2 className="text-3xl font-bold mb-6">Is AI Recommending Your Practice?</h2>
             <p className="text-lg text-muted-foreground mb-10">
               We'll test your practice's visibility across every major AI platform and show
-              you exactly where you stand — and what it takes to become the recommended choice.
+              you exactly where you stand  - and what it takes to become the recommended choice.
             </p>
             <IntakeForm
               trigger={

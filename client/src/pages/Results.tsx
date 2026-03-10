@@ -28,7 +28,7 @@ export default function Results() {
         { metric: "Monthly Implant Revenue", before: "$95K", after: "$340K" },
       ],
       quote:
-        "For the first time, I actually know where my money is going and I can see the results in my schedule. Propel didn't just fix our marketing — they fixed our entire patient intake process.",
+        "For the first time, I actually know where my money is going and I can see the results in my schedule. Propel didn't just fix our marketing  - they fixed our entire patient intake process.",
       doctor: "Dr. Michael Torres",
     },
     {
@@ -46,7 +46,7 @@ export default function Results() {
         { metric: "New Patient Calls", before: "15/mo", after: "85/mo" },
       ],
       quote:
-        "We went from zero implant cases to a full schedule in under 6 months. The P90 training was a game-changer for my team — they went from nervous about implant conversations to confident and closing.",
+        "We went from zero implant cases to a full schedule in under 6 months. The P90 training was a game-changer for my team  - they went from nervous about implant conversations to confident and closing.",
       doctor: "Dr. Amanda Chen",
     },
     {
@@ -84,7 +84,7 @@ export default function Results() {
               <span className="text-primary">Real Results.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-              We believe in full transparency — and that includes showing you exactly what
+              We believe in full transparency  - and that includes showing you exactly what
               we've done for our partners. These are real case studies with real numbers from
               real implant practices.
             </p>
@@ -123,7 +123,7 @@ export default function Results() {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <h2 className="text-2xl font-bold">{study.practice}</h2>
-                    <p className="text-muted-foreground">{study.location} — {study.specialty}</p>
+                    <p className="text-muted-foreground">{study.location}  - {study.specialty}</p>
                   </div>
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, j) => (
@@ -160,7 +160,7 @@ export default function Results() {
 
                 <blockquote className="border-l-4 border-primary pl-6 py-2">
                   <p className="text-foreground italic leading-relaxed mb-2">"{study.quote}"</p>
-                  <cite className="text-sm text-muted-foreground not-italic">— {study.doctor}, {study.practice}</cite>
+                  <cite className="text-sm text-muted-foreground not-italic"> - {study.doctor}, {study.practice}</cite>
                 </blockquote>
               </div>
             </div>

@@ -36,7 +36,7 @@ export default function P90Protocol() {
             </p>
             <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-8">
               This isn't a cookie-cutter onboarding checklist. It's a personalized, in-office
-              program that embeds our team into yours — so we can learn your voice, fix
+              program that embeds our team into yours  - so we can learn your voice, fix
               operational gaps, and build marketing that actually sounds like you.
             </p>
             <IntakeForm
@@ -60,7 +60,7 @@ export default function P90Protocol() {
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Most implant marketing partnerships fail in the first 90 days. Not because the
-                ads don't work — but because the practice isn't ready. Leads come in and nobody
+                ads don't work  - but because the practice isn't ready. Leads come in and nobody
                 knows how to handle them. The front desk isn't trained on full-arch conversations.
                 The workflow has bottlenecks nobody identified. The ads look generic because the
                 agency never took the time to learn the practice.
@@ -112,7 +112,7 @@ export default function P90Protocol() {
               {
                 icon: <Users className="w-5 h-5" />,
                 title: "In-Office Immersion",
-                desc: "Our team visits your practice to meet your staff, observe your workflow, and understand your culture firsthand. This isn't a Zoom call — it's boots on the ground.",
+                desc: "Our team visits your practice to meet your staff, observe your workflow, and understand your culture firsthand. This isn't a Zoom call  - it's boots on the ground.",
               },
               {
                 icon: <Lightbulb className="w-5 h-5" />,
@@ -122,7 +122,7 @@ export default function P90Protocol() {
               {
                 icon: <BarChart3 className="w-5 h-5" />,
                 title: "Competitive Market Analysis",
-                desc: "We analyze every implant practice in your market — their ads, their positioning, their strengths and weaknesses — to find your competitive edge.",
+                desc: "We analyze every implant practice in your market  - their ads, their positioning, their strengths and weaknesses  - to find your competitive edge.",
               },
               {
                 icon: <Wrench className="w-5 h-5" />,
@@ -137,7 +137,7 @@ export default function P90Protocol() {
               {
                 icon: <Shield className="w-5 h-5" />,
                 title: "Systems & Infrastructure Setup",
-                desc: "CRM configuration, call tracking, automated follow-up sequences, and real-time dashboards — everything you need to manage leads from day one.",
+                desc: "CRM configuration, call tracking, automated follow-up sequences, and real-time dashboards  - everything you need to manage leads from day one.",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-lg border border-border bg-background">
@@ -170,22 +170,22 @@ export default function P90Protocol() {
               {
                 icon: <Video className="w-5 h-5" />,
                 title: "Custom Videography & Asset Creation",
-                desc: "Professional video shoot at your practice — doctor spotlights, patient testimonials, procedure walkthroughs, and social content. All custom. All yours.",
+                desc: "Professional video shoot at your practice  - doctor spotlights, patient testimonials, procedure walkthroughs, and social content. All custom. All yours.",
               },
               {
                 icon: <Target className="w-5 h-5" />,
                 title: "Campaign Architecture",
-                desc: "We build your multi-platform campaign strategy based on everything we learned in Phase 1. Targeting, messaging, creative, and budget allocation — all tailored to your market.",
+                desc: "We build your multi-platform campaign strategy based on everything we learned in Phase 1. Targeting, messaging, creative, and budget allocation  - all tailored to your market.",
               },
               {
                 icon: <BarChart3 className="w-5 h-5" />,
                 title: "Landing Page Development",
-                desc: "Custom landing pages designed for full-arch conversions. Not templates — pages built around your practice voice, your team photos, and your unique value proposition.",
+                desc: "Custom landing pages designed for full-arch conversions. Not templates  - pages built around your practice voice, your team photos, and your unique value proposition.",
               },
               {
                 icon: <Lightbulb className="w-5 h-5" />,
                 title: "Ad Creative Production",
-                desc: "Using the video and photography from your shoot, we produce a library of ad creative across formats — static, video, carousel, story, and more.",
+                desc: "Using the video and photography from your shoot, we produce a library of ad creative across formats  - static, video, carousel, story, and more.",
               },
               {
                 icon: <Users className="w-5 h-5" />,
@@ -195,7 +195,7 @@ export default function P90Protocol() {
               {
                 icon: <Wrench className="w-5 h-5" />,
                 title: "Initial Campaign Launch",
-                desc: "Controlled launch across selected platforms with close monitoring. We start conservative and scale based on real data — not assumptions.",
+                desc: "Controlled launch across selected platforms with close monitoring. We start conservative and scale based on real data  - not assumptions.",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-lg border border-border bg-card">
@@ -248,7 +248,7 @@ export default function P90Protocol() {
               {
                 icon: <Lightbulb className="w-5 h-5" />,
                 title: "Long-Term Strategy Development",
-                desc: "We build your 6-month and 12-month growth roadmap — including seasonal strategies, expansion plans, and new service line marketing.",
+                desc: "We build your 6-month and 12-month growth roadmap  - including seasonal strategies, expansion plans, and new service line marketing.",
               },
               {
                 icon: <Shield className="w-5 h-5" />,
@@ -281,7 +281,7 @@ export default function P90Protocol() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
-              "Your marketing sounds like YOU — not a template",
+              "Your marketing sounds like YOU  - not a template",
               "Your team is trained and confident handling implant leads",
               "Your workflow is optimized before you scale",
               "Your lead management system catches every opportunity",
