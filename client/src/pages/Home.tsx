@@ -26,7 +26,7 @@ export default function Home() {
         <div className="container mx-auto relative z-10 py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
-              Your Implant Practice{" "}
+              Your Practice{" "}
               <span className="text-primary">Deserves More</span> Than
               Generic Ads.
             </h1>
