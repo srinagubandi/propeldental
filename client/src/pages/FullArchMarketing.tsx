@@ -23,9 +23,9 @@ export default function FullArchMarketing() {
       icon: <Video className="w-6 h-6" />,
       title: "Custom Video Production & Creative",
       description:
-        "We produce professional practice films, patient testimonial videos, procedure explainers, and ad creative that tells your unique story. No stock footage. No templates. Every frame is authentically yours.",
+        "We produce professional, emotionally charged content, patient testimonial videos, procedure explainers, and ad creative that tells your unique story. No stock footage. No templates. Every frame is authentically yours.",
       features: [
-        "Practice introduction films",
+        "Practice branding films",
         "Patient testimonial videos",
         "Full-arch procedure explainers",
         "Short-form social content (TikTok, Reels, Shorts)",

@@ -36,8 +36,7 @@ export default function P90Protocol() {
             </p>
             <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-8">
               This isn't a cookie-cutter onboarding checklist. It's a personalized, in-office
-              program that embeds our team into yours  - so we can learn your voice, fix
-              operational gaps, and build marketing that actually sounds like you.
+              program that embeds our team into yours  - so we can learn your voice, optimize operational gaps and bottlenecks, and build marketing that actually sounds like you.
             </p>
             <IntakeForm
               trigger={
@@ -59,11 +58,7 @@ export default function P90Protocol() {
                 Why the First 90 Days Make or Break Everything
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Most implant marketing partnerships fail in the first 90 days. Not because the
-                ads don't work  - but because the practice isn't ready. Leads come in and nobody
-                knows how to handle them. The front desk isn't trained on full-arch conversations.
-                The workflow has bottlenecks nobody identified. The ads look generic because the
-                agency never took the time to learn the practice.
+                Most implant marketing partnerships fail in the first 90 days. Not necessarily due to the marketing, but due to the practice not having the correct systems in place to see their highest potential. Leads come in and nobody knows how to handle them. The front desk isn't trained on full-arch conversations. The workflow has bottlenecks nobody identified. The ads look generic because the agency never took the time to learn the practice.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We built the P90 Success Protocol to fix all of that before it becomes a problem.

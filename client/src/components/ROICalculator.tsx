@@ -172,9 +172,9 @@ export default function ROICalculator() {
               </div>
               <Slider
                 id="value"
-                min={100}
-                max={15000}
-                step={100}
+                min={1000}
+                max={80000}
+                step={500}
                 value={[patientValue]}
                 onValueChange={(vals) => setPatientValue(vals[0])}
                 className="py-2"

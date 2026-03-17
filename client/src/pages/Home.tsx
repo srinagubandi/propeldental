@@ -1,9 +1,9 @@
+import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import IntakeForm from "@/components/IntakeForm";
 import {
-  Shield,
   Users,
   Target,
   Eye,
@@ -13,32 +13,60 @@ import {
   TrendingUp,
   Zap,
   Clock,
+  Shield,
 } from "lucide-react";
 
+const HERO_VIDEOS = [
+  "/videos/hero-bg-1.mp4",
+  "/videos/hero-bg-2.mp4",
+  "/videos/hero-bg-3.mp4",
+  "/videos/hero-bg-4.mp4",
+  "/videos/hero-bg-5.mp4",
+  "/videos/hero-bg-6.mp4",
+];
+
 export default function Home() {
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5 pointer-events-none" />
-        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      <section className="relative overflow-hidden min-h-[80vh] flex items-center">
+        {/* Video Background */}
+        {HERO_VIDEOS.map((src, i) => (
+          <video
+            key={src}
+            src={src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              i === currentVideo ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/65 z-10" />
 
-        <div className="container mx-auto relative z-10 py-20 md:py-32 lg:py-40">
+        <div className="container mx-auto relative z-20 py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
-              Your Practice{" "}
-              <span className="text-primary">Deserves More</span> Than
-              Generic Ads.
+            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">
+              The EVOLUTION of Dental Implant Marketing
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8">
+              Your Dental Implant{" "}
+              <span className="text-primary">Growth Partner</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
-              Propel Dental is not an ad agency. We are a tailor-fit marketing and consulting
-              firm built exclusively for full-arch and implant dentistry practices. We work
-              hand-in-hand with you to build your practice identity, strengthen your brand, and
-              fill your chairs with qualified full-arch cases.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <IntakeForm
                 trigger={
                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-14 px-8 text-lg">
@@ -47,15 +75,15 @@ export default function Home() {
                 }
               />
               <Link href="/p90-protocol">
-                <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 h-14 px-8 text-lg font-semibold">
+                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 h-14 px-8 text-lg font-semibold">
                   Explore the P90 Protocol
                 </Button>
               </Link>
             </div>
 
-            <div className="flex flex-wrap gap-6 mt-10 text-sm text-muted-foreground">
+            <div className="flex flex-wrap gap-6 text-sm text-white/80">
               <span className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" /> HIPAA Compliant
+                <CheckCircle2 className="w-4 h-4 text-primary" /> Tailor-Fit Strategies
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary" /> Limited Client List
@@ -67,6 +95,28 @@ export default function Home() {
                 <CheckCircle2 className="w-4 h-4 text-primary" /> All 50 States
               </span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IDENTITY & PURPOSE */}
+      <section className="py-20 md:py-28 border-b border-border bg-card">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide mb-6">
+              Our Identity and Purpose
+            </h2>
+            <p className="text-lg md:text-xl text-foreground leading-relaxed">
+              Propel Dental is a boutique Marketing and Growth Partner built exclusively for
+              full-arch and implant dentistry. Founded by top-performing industry experts, with
+              over 100 years of combined marketing and business development experience,
+              driving innovation in the dental and healthcare space, we specialize in creating
+              sustainable, long-term partnerships through hands-on, in-person collaboration.
+              We identify and build your practice identity, elevate your brand, create unique
+              marketing strategies, eliminate clinical inefficiencies and bottlenecks, and build
+              a customized internal conversion workflow, aligned with your current practice
+              resources, to increase full-arch and implant case acceptance and production.
+            </p>
           </div>
         </div>
       </section>
@@ -106,7 +156,7 @@ export default function Home() {
               {
                 title: "No More Fly-By-Night Agencies",
                 description:
-                  "Our team brings years of experience in implant dentistry marketing specifically. This isn't a side hustle  - it's all we do.",
+                  "Our team brings years of experience in implant dentistry marketing specifically. This isn't a side hustle - it's all we do.",
               },
               {
                 title: "No More Wasted First 90 Days",
@@ -116,7 +166,7 @@ export default function Home() {
               {
                 title: "No More One-Size-Fits-All",
                 description:
-                  "We learn your market, your strengths, your team. Then we build a strategy that's uniquely yours  - because your practice is unique.",
+                  "We learn your market, your strengths, your team. Then we build a strategy that's uniquely yours - because your practice is unique.",
               },
             ].map((item, i) => (
               <div
@@ -177,17 +227,17 @@ export default function Home() {
             <div className="space-y-6">
               {[
                 {
-                  phase: "Days 1–30",
+                  phase: "Days 1-30",
                   title: "Discovery & Foundation",
                   desc: "In-office immersion, team training, practice voice discovery, competitive analysis, and workflow audit.",
                 },
                 {
-                  phase: "Days 31–60",
+                  phase: "Days 31-60",
                   title: "Build & Launch",
                   desc: "Custom creative production, campaign architecture, lead management systems, and initial launch.",
                 },
                 {
-                  phase: "Days 61–90",
+                  phase: "Days 61-90",
                   title: "Optimize & Scale",
                   desc: "Performance analysis, campaign refinement, case acceptance coaching, and scaling strategy.",
                 },
@@ -228,7 +278,7 @@ export default function Home() {
               { icon: <Users className="w-6 h-6" />, title: "Limited Clients", desc: "We cap our client list so every partner gets our full attention and resources." },
               { icon: <Target className="w-6 h-6" />, title: "Custom Everything", desc: "No templates. Every ad, video, and strategy is built from your practice's DNA." },
               { icon: <Eye className="w-6 h-6" />, title: "Full Transparency", desc: "See every dollar, every metric, every decision. No hidden fees or black-box reporting." },
-              { icon: <Award className="w-6 h-6" />, title: "Deep Expertise", desc: "Industry veterans in implant marketing  - not generalists learning on your dime." },
+              { icon: <Award className="w-6 h-6" />, title: "Deep Expertise", desc: "Industry veterans in implant marketing - not generalists learning on your dime." },
             ].map((item, i) => (
               <div key={i} className="text-center p-6 rounded-lg border border-border bg-card hover:border-primary/30 transition-colors">
                 <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4">
@@ -250,7 +300,7 @@ export default function Home() {
               Built for Results. Measured by Transparency.
             </h2>
             <p className="text-lg text-muted-foreground">
-              We don't just promise growth  - we prove it with numbers you can see and verify.
+              We don't just promise growth - we prove it with numbers you can see and verify.
             </p>
           </div>
 
@@ -284,14 +334,14 @@ export default function Home() {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               From custom ad creation to in-office training, we handle every aspect of your
-              implant marketing so you can focus on what you do best  - changing lives.
+              implant marketing so you can focus on what you do best - changing lives.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Custom Ad Creation & Video Production", desc: "Professional videography, patient testimonials, practice films, and ad creative built around your unique story." },
-              { title: "Targeted Digital Advertising", desc: "Facebook, Instagram, TikTok, YouTube, Google Ads, and streaming TV  - all targeted to your ideal full-arch patients." },
+              { title: "Custom Ad Creation & Video Production", desc: "Professional, emotionally charged content, patient testimonials, practice branding, and ad creative built around your unique story." },
+              { title: "Targeted Digital Advertising", desc: "Facebook, Instagram, TikTok, YouTube, Google Ads, and streaming TV - all targeted to your ideal full-arch patients." },
               { title: "Lead Management & Qualification", desc: "Systems and training to ensure every lead is properly handled, qualified, and converted into a consultation." },
               { title: "Case Acceptance Training", desc: "In-office coaching for your team on presenting treatment plans, handling objections, and closing full-arch cases." },
               { title: "Practice Brand Development", desc: "Discover and amplify what makes your practice unique. Build a brand that stands out in your community." },
@@ -324,7 +374,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
               This isn't a sales pitch. It's a real strategy conversation about your practice,
               your market, and whether we're the right fit. We're selective about who we work
-              with  - and we think you should be too.
+              with - and we think you should be too.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <IntakeForm
