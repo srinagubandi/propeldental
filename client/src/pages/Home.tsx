@@ -43,7 +43,7 @@ export default function Home() {
             <rect width="100%" height="100%" fill="url(#grid)" mask="url(#gridMask)"/>
           </svg>
           <div className="hbg-glow" />
-          {[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5].map((v, i) => (
+          {[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8].map((v, i) => (
             <div key={i} className={`hbg-icon hsi-${i+1}`} data-v={String(v)} />
           ))}
           {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((n) => (
