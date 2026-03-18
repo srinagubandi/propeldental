@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import "../hero-bg.css";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -16,45 +16,42 @@ import {
   Shield,
 } from "lucide-react";
 
-const HERO_VIDEOS = [
-  "/videos/hero-bg-1.mp4",
-  "/videos/hero-bg-2.mp4",
-  "/videos/hero-bg-3.mp4",
-  "/videos/hero-bg-4.mp4",
-  "/videos/hero-bg-5.mp4",
-  "/videos/hero-bg-6.mp4",
-];
-
 export default function Home() {
-  const [currentVideo, setCurrentVideo] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <Layout>
       {/* HERO */}
       <section className="relative overflow-hidden min-h-[80vh] flex items-center">
-        {/* Video Background */}
-        {HERO_VIDEOS.map((src, i) => (
-          <video
-            key={src}
-            src={src}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              i === currentVideo ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/65 z-10" />
+        {/* Animated Dental Implant Background */}
+        <div id="hero-bg" aria-hidden="true">
+          <div className="hbg-gradient" />
+          <svg className="hbg-grid" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+              <pattern id="grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+                <line x1="80" y1="0" x2="80" y2="80" stroke="#26292e" strokeWidth="0.6"/>
+                <line x1="0" y1="80" x2="80" y2="80" stroke="#26292e" strokeWidth="0.6"/>
+              </pattern>
+              <radialGradient id="gridFade" cx="55%" cy="50%" r="58%">
+                <stop offset="0%" stopColor="white" stopOpacity="1"/>
+                <stop offset="65%" stopColor="white" stopOpacity="0.3"/>
+                <stop offset="100%" stopColor="white" stopOpacity="0"/>
+              </radialGradient>
+              <mask id="gridMask">
+                <rect width="100%" height="100%" fill="url(#gridFade)"/>
+              </mask>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" mask="url(#gridMask)"/>
+          </svg>
+          <div className="hbg-glow" />
+          {[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5].map((v, i) => (
+            <div key={i} className={`hbg-icon hsi-${i+1}`} data-v={String(v)} />
+          ))}
+          {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((n) => (
+            <div key={n} className={`hbg-particle hp${n}`} />
+          ))}
+          <div className="hbg-scan" />
+          <div className="hbg-vignette" />
+        </div>
 
         <div className="container mx-auto relative z-20 py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl">
