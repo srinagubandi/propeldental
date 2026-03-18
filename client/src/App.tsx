@@ -1,25 +1,35 @@
+// PageSpeed optimization: lazy-load all non-home pages so the initial JS bundle
+// only includes Home page code. Other pages are fetched on demand.
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+// Home is eagerly loaded — it's the entry point and needed immediately
 import Home from "./pages/Home";
-import FullArchMarketing from "./pages/FullArchMarketing";
-import P90Protocol from "./pages/P90Protocol";
-import Results from "./pages/Results";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import Calculator from "@/pages/Calculator";
-import DentalSEO from "@/pages/services/DentalSEO";
-import SocialMedia from "@/pages/services/SocialMedia";
-import PaidSearch from "@/pages/services/PaidSearch";
-import VideoProduction from "@/pages/services/VideoProduction";
-import AEO from "@/pages/services/AEO";
-import GEO from "@/pages/services/GEO";
+// All other pages lazy-loaded — only fetched when the user navigates to them
+const NotFound        = lazy(() => import("@/pages/NotFound"));
+const FullArchMarketing = lazy(() => import("@/pages/FullArchMarketing"));
+const P90Protocol     = lazy(() => import("@/pages/P90Protocol"));
+const Results         = lazy(() => import("@/pages/Results"));
+const About           = lazy(() => import("@/pages/About"));
+const Contact         = lazy(() => import("@/pages/Contact"));
+const Calculator      = lazy(() => import("@/pages/Calculator"));
+const DentalSEO       = lazy(() => import("@/pages/services/DentalSEO"));
+const SocialMedia     = lazy(() => import("@/pages/services/SocialMedia"));
+const PaidSearch      = lazy(() => import("@/pages/services/PaidSearch"));
+const VideoProduction = lazy(() => import("@/pages/services/VideoProduction"));
+const AEO             = lazy(() => import("@/pages/services/AEO"));
+const GEO             = lazy(() => import("@/pages/services/GEO"));
+// Minimal loading fallback — dark background matching site theme, no layout shift
+function PageLoader() {
+  return <div style={{ minHeight: "100vh", background: "#05070b" }} />;
+}
 
 function Router() {
   return (
+    <Suspense fallback={<PageLoader />}>
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/full-arch-marketing"} component={FullArchMarketing} />
@@ -38,6 +48,7 @@ function Router() {
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
+    </Suspense>
   );
 }
 
