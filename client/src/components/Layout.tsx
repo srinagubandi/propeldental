@@ -49,13 +49,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:8887767735"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span>(888) PROPEL-5</span>
-            </a>
             <IntakeForm
               trigger={
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-5">
@@ -92,13 +85,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </Link>
               ))}
               <div className="pt-4 px-4 space-y-3">
-                <a
-                  href="tel:8887767735"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>(888) PROPEL-5</span>
-                </a>
                 <IntakeForm
                   trigger={
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
