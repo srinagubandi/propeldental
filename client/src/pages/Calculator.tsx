@@ -11,8 +11,8 @@ export default function Calculator() {
               Growth Estimator
             </div>
             <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight mb-6">
-              Full-Arch{" "}
-              <span className="text-primary">ROI Estimator</span>
+              New Patient{" "}
+              <span className="text-primary">Production Calculator</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               See what a transparent, custom-built marketing program could mean for your

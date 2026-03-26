@@ -55,13 +55,14 @@ export default function Home() {
 
         <div className="container mx-auto relative z-20 py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl">
-            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">
-              The EVOLUTION of Dental Implant Marketing
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-4">
               Your Dental Implant{" "}
               <span className="text-primary">Growth Partner</span>
             </h1>
+            {/* Eyebrow text moved below the H1 per design update */}
+            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-8">
+              The EVOLUTION of Dental Implant Marketing
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <IntakeForm

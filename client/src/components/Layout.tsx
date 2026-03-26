@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: "/full-arch-marketing", label: "Full-Arch Marketing" },
     { href: "/p90-protocol", label: "P90 Protocol" },
     { href: "/results", label: "Results" },
-    { href: "/calculator", label: "ROI Estimator" },
+    { href: "/calculator", label: "Production Estimator" },
     { href: "/about", label: "About" },
   ];
 
