@@ -34,8 +34,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Call Us</h3>
-                    <a href="tel:8887767735" className="text-primary hover:underline text-lg font-medium">
-                      (888) PROPEL-5
+                    <a href="tel:9549450011" className="text-primary hover:underline text-lg font-medium">
+                      (954) 945-0011
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       Talk to a real person who understands implant dentistry.
@@ -122,8 +122,8 @@ export default function Contact() {
 
               <p className="text-xs text-muted-foreground text-center mt-4">
                 Or call us directly at{" "}
-                <a href="tel:8887767735" className="text-primary hover:underline">
-                  (888) PROPEL-5
+                <a href="tel:9549450011" className="text-primary hover:underline">
+                  (954) 945-0011
                 </a>
               </p>
             </div>

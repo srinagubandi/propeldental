@@ -129,11 +129,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 The full-arch growth partner built for implant practices that refuse to settle for generic marketing.
               </p>
               <a
-                href="tel:8887767735"
+                href="tel:9549450011"
                 className="flex items-center gap-2 mt-4 text-sm text-primary hover:text-primary/80 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                (888) PROPEL-5
+                (954) 945-0011
               </a>
             </div>
 

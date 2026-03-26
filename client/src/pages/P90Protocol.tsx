@@ -312,9 +312,9 @@ export default function P90Protocol() {
                   </Button>
                 }
               />
-              <a href="tel:8887767735">
+              <a href="tel:9549450011">
                 <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 h-14 px-8 text-lg font-semibold">
-                  Call (888) PROPEL-5
+                  Call (954) 945-0011
                 </Button>
               </a>
             </div>
