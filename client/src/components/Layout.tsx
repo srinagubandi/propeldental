@@ -49,12 +49,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
+            {/* Header phone number — tap-to-call on mobile */}
             <a
-              href="tel:8887767735"
+              href="tel:9549450011"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>(888) PROPEL-5</span>
+              <span>(954) 945-0011</span>
             </a>
             <IntakeForm
               trigger={
@@ -92,12 +93,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </Link>
               ))}
               <div className="pt-4 px-4 space-y-3">
+                {/* Mobile menu phone number — tap-to-call */}
                 <a
-                  href="tel:8887767735"
+                  href="tel:9549450011"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>(888) PROPEL-5</span>
+                  <span>(954) 945-0011</span>
                 </a>
                 <IntakeForm
                   trigger={
