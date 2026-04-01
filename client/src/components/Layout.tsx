@@ -66,13 +66,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             />
           </div>
 
-          <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile header actions — phone icon + hamburger, visible on small screens */}
+          <div className="lg:hidden flex items-center gap-1">
+            {/* Tap-to-call phone icon — always visible above the fold on mobile */}
+            <a
+              href="tel:9292226167"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+              aria-label="Call (929) 222-6167"
+            >
+              <Phone className="w-5 h-5" />
+            </a>
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {mobileMenuOpen && (
