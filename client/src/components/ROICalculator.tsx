@@ -1,20 +1,19 @@
 /**
  * =============================================================================
- * ROICALCULATOR.TSX - Propel.Dental ROI / Growth Calculator
+ * ROICALCULATOR.TSX - Propel.Dental New Patient Production Calculator
  * =============================================================================
  *
  * This interactive calculator lets dental practices estimate their potential
  * revenue growth with Propel Dental's transparent, accountable marketing.
  *
  * HOW IT WORKS:
- *   1. User selects their dental specialty
- *   2. User sets their current monthly new patient count
- *   3. User sets their average revenue per patient
- *   4. User enters email to get results
- *   5. Calculator shows projected additional patients and revenue
+ *   1. User sets their current monthly new patient count
+ *   2. User sets their average revenue per patient ($800 - $80,000)
+ *   3. User enters email to get results
+ *   4. Calculator shows projected additional patients and revenue
  *
- * TO CHANGE GROWTH RATES: Edit the DENTAL_SPECIALTIES object below
- * TO CHANGE AVERAGE VALUES: Edit the avgValue field for each specialty
+ * TO CHANGE GROWTH RATE: Edit the GROWTH_RATE constant below
+ * TO CHANGE DOLLAR RANGE: Edit the min/max on the patientValue Slider
  *
  * =============================================================================
  */
@@ -23,49 +22,28 @@ import { useState } from "react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, Calculator, DollarSign, TrendingUp, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // -----------------------------------------------------------------------------
-// DENTAL SPECIALTIES CONFIGURATION
-// growth = conservative growth rate (e.g., 0.35 = 35% more patients)
-// avgValue = average revenue per patient/case for this specialty
+// GROWTH RATE CONFIGURATION
+// Conservative growth rate applied to all practices (e.g., 0.40 = 40% more patients)
 // -----------------------------------------------------------------------------
-const DENTAL_SPECIALTIES = {
-  "general": { label: "General Dentistry", growth: 0.30, avgValue: 800 },
-  "orthodontics": { label: "Orthodontics", growth: 0.40, avgValue: 5500 },
-  "cosmetic": { label: "Cosmetic Dentistry", growth: 0.35, avgValue: 3500 },
-  "implants": { label: "Dental Implants", growth: 0.45, avgValue: 4500 },
-  "oral_surgery": { label: "Oral Surgery", growth: 0.35, avgValue: 2000 },
-  "periodontics": { label: "Periodontics", growth: 0.30, avgValue: 1800 },
-  "endodontics": { label: "Endodontics", growth: 0.28, avgValue: 1200 },
-  "pediatric": { label: "Pediatric Dentistry", growth: 0.35, avgValue: 900 },
-  "prosthodontics": { label: "Prosthodontics", growth: 0.25, avgValue: 6000 },
-  "sedation": { label: "Sedation Dentistry", growth: 0.30, avgValue: 2500 },
-};
+const GROWTH_RATE = 0.40;
 
 export default function ROICalculator() {
-  const [specialty, setSpecialty] = useState("general");
   const [monthlyPatients, setMonthlyPatients] = useState(30);
-  const [patientValue, setPatientValue] = useState(800);
+  const [patientValue, setPatientValue] = useState(4500);
   const [showResults, setShowResults] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Update default patient value when specialty changes
-  const handleSpecialtyChange = (value: string) => {
-    setSpecialty(value);
-    setPatientValue(DENTAL_SPECIALTIES[value as keyof typeof DENTAL_SPECIALTIES].avgValue);
-  };
-
   // Calculate projections
-  const growthRate = DENTAL_SPECIALTIES[specialty as keyof typeof DENTAL_SPECIALTIES].growth;
-  const additionalPatients = Math.round(monthlyPatients * growthRate);
+  const additionalPatients = Math.round(monthlyPatients * GROWTH_RATE);
   const monthlyRevenueIncrease = additionalPatients * patientValue;
   const annualRevenueIncrease = monthlyRevenueIncrease * 12;
 
@@ -85,10 +63,10 @@ export default function ROICalculator() {
       try {
         await submitLead.mutateAsync({
           email,
-          specialty: DENTAL_SPECIALTIES[specialty as keyof typeof DENTAL_SPECIALTIES].label,
+          specialty: "Dental Implants / Full-Arch",
           monthlyPatients,
           patientValue,
-          projectedGrowth: growthRate,
+          projectedGrowth: GROWTH_RATE,
           projectedAnnualRevenue: annualRevenueIncrease,
         });
         setShowResults(true);
@@ -109,32 +87,17 @@ export default function ROICalculator() {
           <CardHeader className="px-0 pt-0">
             <div className="flex items-center gap-2 text-secondary mb-2">
               <Calculator className="w-5 h-5" />
-              <span className="text-sm font-bold uppercase tracking-wider">Dental Growth Calculator</span>
+              <span className="text-sm font-bold uppercase tracking-wider">New Patient Production Calculator</span>
             </div>
             <CardTitle className="text-2xl md:text-3xl font-bold text-primary">
               Calculate Your Potential
             </CardTitle>
             <CardDescription className="text-base mt-2">
-              See how much revenue your dental practice could be missing. Enter your current metrics below.
+              See how much production your implant practice could be missing. Enter your current metrics below.
             </CardDescription>
           </CardHeader>
 
           <form onSubmit={handleCalculate} className="space-y-8 mt-6">
-
-            {/* Dental Specialty Selector */}
-            <div className="space-y-4">
-              <Label htmlFor="specialty" className="text-base font-medium">Dental Specialty</Label>
-              <Select value={specialty} onValueChange={handleSpecialtyChange}>
-                <SelectTrigger id="specialty" className="h-12 text-lg">
-                  <SelectValue placeholder="Select your dental specialty" />
-                </SelectTrigger>
-                <SelectContent>
-                  {Object.entries(DENTAL_SPECIALTIES).map(([key, data]) => (
-                    <SelectItem key={key} value={key}>{data.label}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
 
             {/* Monthly New Patients Slider */}
             <div className="space-y-4">
@@ -160,11 +123,11 @@ export default function ROICalculator() {
               </p>
             </div>
 
-            {/* Average Revenue Per Patient Slider */}
+            {/* Average Revenue Per Patient Slider — $800 to $80,000 */}
             <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <Label htmlFor="value" className="text-base font-medium">
-                  Avg. Revenue per Patient ($)
+                  Avg. Production per Patient ($)
                 </Label>
                 <span className="text-xl font-bold text-primary bg-blue-50 px-3 py-1 rounded">
                   ${patientValue.toLocaleString()}
@@ -172,22 +135,26 @@ export default function ROICalculator() {
               </div>
               <Slider
                 id="value"
-                min={1000}
+                min={800}
                 max={80000}
-                step={500}
+                step={200}
                 value={[patientValue]}
                 onValueChange={(vals) => setPatientValue(vals[0])}
                 className="py-2"
               />
+              <div className="flex justify-between text-xs text-muted-foreground">
+                <span>$800</span>
+                <span>$80,000</span>
+              </div>
               <p className="text-xs text-muted-foreground">
-                Average revenue per new patient or case (first visit / treatment plan).
+                Average production per new patient or full-arch case (first visit / treatment plan).
               </p>
             </div>
 
             {/* Email Input & Submit */}
             <div className="pt-4">
               <Label htmlFor="email" className="text-base font-medium mb-2 block">
-                Where should we send your detailed dental growth report?
+                Where should we send your detailed production growth report?
               </Label>
               <div className="flex gap-2">
                 <Input
@@ -236,9 +203,9 @@ export default function ROICalculator() {
                 <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold">Ready to see your dental practice growth?</h3>
+                <h3 className="text-2xl font-bold">Ready to see your production potential?</h3>
                 <p className="text-blue-100 text-lg">
-                  Enter your metrics to unlock a personalized projection of your practice's potential revenue growth with Propel Dental.
+                  Enter your metrics to unlock a personalized projection of your practice's potential production growth with Propel Dental.
                 </p>
                 {/* Blurred placeholder cards */}
                 <div className="grid grid-cols-2 gap-4 mt-8 opacity-50 blur-[2px]">
@@ -263,7 +230,7 @@ export default function ROICalculator() {
               >
                 {/* Annual Revenue Projection */}
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-medium text-blue-100 mb-1">Projected Annual Growth</h3>
+                  <h3 className="text-xl font-medium text-blue-100 mb-1">Projected Annual Production Growth</h3>
                   <div className="text-5xl md:text-6xl font-bold text-white tracking-tight">
                     +${annualRevenueIncrease.toLocaleString()}
                   </div>
@@ -286,7 +253,7 @@ export default function ROICalculator() {
                       <div className="p-2 bg-green-500/20 rounded-full">
                         <DollarSign className="w-5 h-5 text-green-400" />
                       </div>
-                      <span className="font-medium">Monthly Revenue</span>
+                      <span className="font-medium">Monthly Production</span>
                     </div>
                     <span className="text-2xl font-bold text-green-400">
                       +${monthlyRevenueIncrease.toLocaleString()}
@@ -298,13 +265,13 @@ export default function ROICalculator() {
                 <div className="bg-blue-900/50 p-4 rounded-lg text-sm text-blue-100 border border-blue-800">
                   <p>
                     <strong>Note:</strong> This projection is based on a conservative{" "}
-                    <strong>{Math.round(growthRate * 100)}% growth rate</strong>, typical for{" "}
-                    {DENTAL_SPECIALTIES[specialty as keyof typeof DENTAL_SPECIALTIES].label} practices in their first 6 months with Propel Dental.
+                    <strong>{Math.round(GROWTH_RATE * 100)}% growth rate</strong>, typical for
+                    implant and full-arch practices in their first 6 months with Propel Dental.
                   </p>
                 </div>
 
                 <Button className="w-full bg-white text-primary hover:bg-blue-50 font-bold h-12 text-lg">
-                  Start Your Dental Growth Plan
+                  Start Your Production Growth Plan
                 </Button>
               </motion.div>
             )}

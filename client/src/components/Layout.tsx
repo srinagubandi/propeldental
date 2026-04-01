@@ -51,11 +51,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="hidden lg:flex items-center gap-4">
             {/* Header phone number — tap-to-call on mobile */}
             <a
-              href="tel:9549450011"
+              href="tel:9292226167"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>(954) 945-0011</span>
+              <span>(929) 222-6167</span>
             </a>
             <IntakeForm
               trigger={
@@ -95,11 +95,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="pt-4 px-4 space-y-3">
                 {/* Mobile menu phone number — tap-to-call */}
                 <a
-                  href="tel:9549450011"
+                  href="tel:9292226167"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>(954) 945-0011</span>
+                  <span>(929) 222-6167</span>
                 </a>
                 <IntakeForm
                   trigger={
@@ -129,11 +129,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 The full-arch growth partner built for implant practices that refuse to settle for generic marketing.
               </p>
               <a
-                href="tel:9549450011"
+                href="tel:9292226167"
                 className="flex items-center gap-2 mt-4 text-sm text-primary hover:text-primary/80 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                (954) 945-0011
+                (929) 222-6167
               </a>
             </div>
 
@@ -154,7 +154,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
                 <li><Link href="/results" className="hover:text-primary transition-colors">Results & Case Studies</Link></li>
-                <li><Link href="/calculator" className="hover:text-primary transition-colors">ROI Estimator</Link></li>
+                <li><Link href="/calculator" className="hover:text-primary transition-colors">Production Estimator</Link></li>
                 <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
               </ul>
             </div>
@@ -164,14 +164,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/services/aeo" className="hover:text-primary transition-colors">AEO Best Practices</Link></li>
                 <li><Link href="/services/geo" className="hover:text-primary transition-colors">GEO Best Practices</Link></li>
-                <li><Link href="/calculator" className="hover:text-primary transition-colors">ROI Estimator</Link></li>
-              </ul>
-              <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 mt-6">Also Serving</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>General Dentistry</li>
-                <li>Orthodontics</li>
-                <li>Cosmetic Dentistry</li>
-                <li>Oral Surgery</li>
+                <li><Link href="/calculator" className="hover:text-primary transition-colors">Production Estimator</Link></li>
               </ul>
             </div>
           </div>

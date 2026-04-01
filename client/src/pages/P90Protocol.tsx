@@ -312,9 +312,9 @@ export default function P90Protocol() {
                   </Button>
                 }
               />
-              <a href="tel:9549450011">
+              <a href="tel:9292226167">
                 <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 h-14 px-8 text-lg font-semibold">
-                  Call (954) 945-0011
+                  Call (929) 222-6167
                 </Button>
               </a>
             </div>
