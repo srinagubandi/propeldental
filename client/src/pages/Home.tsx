@@ -106,7 +106,7 @@ export default function Home() {
             </h2>
             <p className="text-lg md:text-xl text-foreground leading-relaxed">
               Propel Dental exists for one reason: to help implant-focused practices explode
-              their production without burning out their team or budget. Most agencies treat
+              their production without burning out their team or budget.<br /><br />Most agencies treat
               implant marketing like general dentistry. We don&rsquo;t. We live and breathe full-arch,
               All-on-X, and complex implant cases. By adopting a 360&deg; marketing approach,
               including branding, SEM, SEO, reputation building, and more, we ensure long-term,
