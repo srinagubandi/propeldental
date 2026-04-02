@@ -56,12 +56,12 @@ export default function Home() {
         <div className="container mx-auto relative z-20 py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-4">
-              Your Dental Implant{" "}
-              <span className="text-primary">Growth Partner</span>
+              Scaling Implant Practices Through{" "}
+              <span className="text-primary">Predictable, Performance-Based Results</span>
             </h1>
-            {/* Eyebrow text moved below the H1 per design update */}
+            {/* Sub-headline */}
             <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-8">
-              The EVOLUTION of Dental Implant Marketing
+              Your Dental Implant Growth Partner &mdash; <span className="text-primary font-bold">EVOLVED</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -90,7 +90,7 @@ export default function Home() {
                 <CheckCircle2 className="w-4 h-4 text-primary" /> Full Transparency
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" /> All 50 States
+                <CheckCircle2 className="w-4 h-4 text-primary" /> Driven By Results
               </span>
             </div>
           </div>
@@ -102,18 +102,18 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide mb-6">
-              Our Identity and Purpose
+              Our Identity and Focus
             </h2>
             <p className="text-lg md:text-xl text-foreground leading-relaxed">
-              Propel Dental is a boutique Marketing and Growth Partner built exclusively for
-              full-arch and implant dentistry. Founded by top-performing industry experts, with
-              over 100 years of combined marketing and business development experience,
-              driving innovation in the dental and healthcare space, we specialize in creating
-              sustainable, long-term partnerships through hands-on, in-person collaboration.
-              We identify and build your practice identity, elevate your brand, create unique
-              marketing strategies, eliminate clinical inefficiencies and bottlenecks, and build
-              a customized internal conversion workflow, aligned with your current practice
-              resources, to increase full-arch and implant case acceptance and production.
+              Propel Dental exists for one reason: to help implant-focused practices explode
+              their production without burning out their team or budget. Most agencies treat
+              implant marketing like general dentistry. We don&rsquo;t. We live and breathe full-arch,
+              All-on-X, and complex implant cases. By adopting a 360&deg; marketing approach,
+              including branding, SEM, SEO, reputation building, and more, we ensure long-term,
+              sustainable growth, not short-term gimmicks. With over 100 years of combined
+              marketing experience, our strategies use real-world data and a deep understanding
+              of today&rsquo;s marketing trends to convert high-value implant patients, focusing on
+              current effectiveness rather than outdated methods of what used to work.
             </p>
           </div>
         </div>
