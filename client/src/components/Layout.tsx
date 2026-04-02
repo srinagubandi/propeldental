@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <div className="flex items-center">
               <span className="text-xl md:text-2xl font-bold tracking-tight text-foreground">
                 PROPEL
