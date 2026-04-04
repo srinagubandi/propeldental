@@ -185,8 +185,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               &copy; {new Date().getFullYear()} Propel Dental. All rights reserved. HIPAA Compliant.
             </p>
             <div className="flex gap-6 text-xs text-muted-foreground">
-              <span className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</span>
-              <span className="hover:text-primary transition-colors cursor-pointer">Terms of Service</span>
+              <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

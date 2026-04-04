@@ -17,6 +17,8 @@ import PaidSearch from "@/pages/services/PaidSearch";
 import VideoProduction from "@/pages/services/VideoProduction";
 import AEO from "@/pages/services/AEO";
 import GEO from "@/pages/services/GEO";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
 
 function Router() {
   return (
@@ -35,6 +37,9 @@ function Router() {
       <Route path="/services/video-production" component={VideoProduction} />
       <Route path="/services/aeo" component={AEO} />
       <Route path="/services/geo" component={GEO} />
+      {/* Legal pages — linked from footer */}
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
