@@ -9,6 +9,14 @@ All notable design-package changes are documented in this file. This branch foll
 - Baseline, content-retention, reference-token, concept, and review records for a design-only expansion.
 - Three desktop and three mobile visual concept renders using Latin placeholder copy.
 - Proposed reusable case-study and team-profile templates with evidence and asset guardrails.
+- Three complete desktop and mobile homepage concept renders using the current homepage and shared footer copy.
+- Reproducible static layout sources and a browser-protocol full-page capture script.
+- Homepage copy-lock and render QA record.
+
+### Changed
+
+- Restored the current `Book a Strategy Call` label as the primary action in all copy-locked homepage render concepts.
+- Used the existing `client/public/images/logo.svg` source asset in the header and footer of every copy-locked homepage render.
 
 ### Constraints
 

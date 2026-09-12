@@ -26,6 +26,8 @@ This versioned, **design-only** package contains three divergent desktop/mobile 
 | `MEDIA-FALLBACK-MATRIX.md` | Static-first, mobile, and reduced-motion requirements. |
 | `RENDER-QA.md` | Observed review of the six rendered concept images. |
 | `REDIRECT-EVENTS-HANDOFF.md` | Future redirect, minimal-event, and implementation handoff decisions. |
+| `FULL-HOMEPAGE-CONCEPTS.md` | Three copy-locked, full-scroll desktop and mobile homepage concept renders. |
+| `HOMEPAGE-COPY-LOCK-QA.md` | Current-copy and current-logo verification for the six full-homepage renders. |
 
 ## Non-negotiable content boundary
 

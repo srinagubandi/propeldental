@@ -4,11 +4,11 @@
 
 ## Shared operating rules
 
-Each direction keeps the current Propel Dental logo and core offer in view, speaks first to a dental-practice owner or decision-maker, and provides an explicit **Get in touch** action at every major decision point. Operations leaders can continue into a method, proof, or service route. The concepts preserve the existing public route set as described in the retention plan and add the proposed templates only after approval.[1]
+Each direction keeps the current Propel Dental logo and core offer in view, speaks first to a dental-practice owner or decision-maker, and provides an explicit contact action at every major decision point. The original expansion concepts use **Get in touch** as a design hypothesis. The subsequent copy-locked full-homepage renders supersede that hypothetical label with the current **Book a Strategy Call** CTA. Operations leaders can continue into a method, proof, or service route. The concepts preserve the existing public route set as described in the retention plan and add the proposed templates only after approval.[1]
 
 | Shared requirement | Treatment in all concepts |
 |---|---|
-| Primary conversion | `Get in touch` stays visually dominant, with a plain-language explanation of the next step in production. |
+| Primary conversion | Original expansion preview: `Get in touch` hypothesis. Copy-locked homepage renders: current `Book a Strategy Call` CTA retained verbatim. |
 | Brand continuity | Existing logo retained. Orange remains the decisive emphasis/interaction signal. |
 | Placeholder policy | New body content uses Latin text. Placeholder visuals carry an `Illustrative content` label. |
 | Case-study proof | A case study must show evidence type, source/owner, review date, scope, and limitation before a quantitative outcome or testimonial is published. |
